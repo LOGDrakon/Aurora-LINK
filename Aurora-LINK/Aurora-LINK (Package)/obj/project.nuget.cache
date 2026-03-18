@@ -1,0 +1,86 @@
+{
+  "version": 2,
+  "dgSpecHash": "VVwR2VWKYDQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\MAINTENANCE\\source\\repos\\LOGDrakon\\Aurora-LINK\\Aurora-LINK\\Aurora-LINK (Package)\\Aurora-LINK (Package).wapproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\link.client\\1.0.0\\link.client.1.0.0.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\link.core\\1.0.0\\link.core.1.0.0.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\link.transport.serial\\1.0.0\\link.transport.serial.1.0.0.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\microsoft.bcl.numerics\\9.0.0\\microsoft.bcl.numerics.9.0.0.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\microsoft.web.webview2\\1.0.3179.45\\microsoft.web.webview2.1.0.3179.45.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.26100.7705\\microsoft.windows.sdk.buildtools.10.0.26100.7705.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\microsoft.windows.sdk.buildtools.msix\\1.7.20250829.1\\microsoft.windows.sdk.buildtools.msix.1.7.20250829.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\microsoft.windowsappsdk\\1.8.260209005\\microsoft.windowsappsdk.1.8.260209005.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\microsoft.windowsappsdk.ai\\1.8.47\\microsoft.windowsappsdk.ai.1.8.47.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\microsoft.windowsappsdk.base\\1.8.251216001\\microsoft.windowsappsdk.base.1.8.251216001.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\microsoft.windowsappsdk.dwrite\\1.8.25122902\\microsoft.windowsappsdk.dwrite.1.8.25122902.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\microsoft.windowsappsdk.foundation\\1.8.260203002\\microsoft.windowsappsdk.foundation.1.8.260203002.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\microsoft.windowsappsdk.interactiveexperiences\\1.8.260125001\\microsoft.windowsappsdk.interactiveexperiences.1.8.260125001.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\microsoft.windowsappsdk.ml\\1.8.2124\\microsoft.windowsappsdk.ml.1.8.2124.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\microsoft.windowsappsdk.runtime\\1.8.260209005\\microsoft.windowsappsdk.runtime.1.8.260209005.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\microsoft.windowsappsdk.widgets\\1.8.251231004\\microsoft.windowsappsdk.widgets.1.8.251231004.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\microsoft.windowsappsdk.winui\\1.8.260204000\\microsoft.windowsappsdk.winui.1.8.260204000.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\runtime.android-arm.runtime.native.system.io.ports\\10.0.1\\runtime.android-arm.runtime.native.system.io.ports.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\runtime.android-arm64.runtime.native.system.io.ports\\10.0.1\\runtime.android-arm64.runtime.native.system.io.ports.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\runtime.android-x64.runtime.native.system.io.ports\\10.0.1\\runtime.android-x64.runtime.native.system.io.ports.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\runtime.android-x86.runtime.native.system.io.ports\\10.0.1\\runtime.android-x86.runtime.native.system.io.ports.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\10.0.1\\runtime.linux-arm.runtime.native.system.io.ports.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\10.0.1\\runtime.linux-arm64.runtime.native.system.io.ports.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\runtime.linux-bionic-arm64.runtime.native.system.io.ports\\10.0.1\\runtime.linux-bionic-arm64.runtime.native.system.io.ports.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\runtime.linux-bionic-x64.runtime.native.system.io.ports\\10.0.1\\runtime.linux-bionic-x64.runtime.native.system.io.ports.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\runtime.linux-musl-arm.runtime.native.system.io.ports\\10.0.1\\runtime.linux-musl-arm.runtime.native.system.io.ports.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\runtime.linux-musl-arm64.runtime.native.system.io.ports\\10.0.1\\runtime.linux-musl-arm64.runtime.native.system.io.ports.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\runtime.linux-musl-x64.runtime.native.system.io.ports\\10.0.1\\runtime.linux-musl-x64.runtime.native.system.io.ports.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\10.0.1\\runtime.linux-x64.runtime.native.system.io.ports.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\runtime.maccatalyst-arm64.runtime.native.system.io.ports\\10.0.1\\runtime.maccatalyst-arm64.runtime.native.system.io.ports.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\runtime.maccatalyst-x64.runtime.native.system.io.ports\\10.0.1\\runtime.maccatalyst-x64.runtime.native.system.io.ports.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\runtime.native.system.io.ports\\10.0.1\\runtime.native.system.io.ports.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\10.0.1\\runtime.osx-arm64.runtime.native.system.io.ports.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\10.0.1\\runtime.osx-x64.runtime.native.system.io.ports.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\system.codedom\\10.0.1\\system.codedom.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\system.io.ports\\10.0.1\\system.io.ports.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\system.management\\10.0.1\\system.management.10.0.1.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\system.numerics.tensors\\9.0.0\\system.numerics.tensors.9.0.0.nupkg.sha512",
+    "C:\\Users\\MAINTENANCE\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Le package 'LINK.Client 1.0.0' a été restauré en utilisant 'net8.0-windows10.0.26100, .NETCoreApp,Version=v3.1, .NETCoreApp,Version=v3.0, .NETCoreApp,Version=v2.0, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1, net10.0-windows10.0.26100, .NETFramework,Version=v4.6.1' au lieu du framework cible du projet 'UAP,Version=v10.0.17763'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
+      "projectPath": "C:\\Users\\MAINTENANCE\\source\\repos\\LOGDrakon\\Aurora-LINK\\Aurora-LINK\\Aurora-LINK (Package)\\Aurora-LINK (Package).wapproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\MAINTENANCE\\source\\repos\\LOGDrakon\\Aurora-LINK\\Aurora-LINK\\Aurora-LINK (Package)\\Aurora-LINK (Package).wapproj",
+      "libraryId": "LINK.Client",
+      "targetGraphs": [
+        "UAP,Version=v10.0.17763"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Le package 'LINK.Core 1.0.0' a été restauré en utilisant 'net8.0-windows10.0.26100, .NETCoreApp,Version=v3.1, .NETCoreApp,Version=v3.0, .NETCoreApp,Version=v2.0, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1, net10.0-windows10.0.26100, .NETFramework,Version=v4.6.1' au lieu du framework cible du projet 'UAP,Version=v10.0.17763'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
+      "projectPath": "C:\\Users\\MAINTENANCE\\source\\repos\\LOGDrakon\\Aurora-LINK\\Aurora-LINK\\Aurora-LINK (Package)\\Aurora-LINK (Package).wapproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\MAINTENANCE\\source\\repos\\LOGDrakon\\Aurora-LINK\\Aurora-LINK\\Aurora-LINK (Package)\\Aurora-LINK (Package).wapproj",
+      "libraryId": "LINK.Core",
+      "targetGraphs": [
+        "UAP,Version=v10.0.17763"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Le package 'LINK.Transport.Serial 1.0.0' a été restauré en utilisant 'net8.0-windows10.0.26100, .NETCoreApp,Version=v3.1, .NETCoreApp,Version=v3.0, .NETCoreApp,Version=v2.0, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1, net10.0-windows10.0.26100, .NETFramework,Version=v4.6.1' au lieu du framework cible du projet 'UAP,Version=v10.0.17763'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
+      "projectPath": "C:\\Users\\MAINTENANCE\\source\\repos\\LOGDrakon\\Aurora-LINK\\Aurora-LINK\\Aurora-LINK (Package)\\Aurora-LINK (Package).wapproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\MAINTENANCE\\source\\repos\\LOGDrakon\\Aurora-LINK\\Aurora-LINK\\Aurora-LINK (Package)\\Aurora-LINK (Package).wapproj",
+      "libraryId": "LINK.Transport.Serial",
+      "targetGraphs": [
+        "UAP,Version=v10.0.17763"
+      ]
+    }
+  ]
+}

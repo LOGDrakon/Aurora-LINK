@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="Aurora-LINK" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<NamedResource name="App.xbf" uri="ms-resource://Aurora-LINK/Files/App.xbf">
+				<Candidate type="Path">
+					<Value>App.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MainWindow.xbf" uri="ms-resource://Aurora-LINK/Files/MainWindow.xbf">
+				<Candidate type="Path">
+					<Value>MainWindow.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<ResourceMapSubtree name="Pages">
+				<NamedResource name="DashboardPage.xbf" uri="ms-resource://Aurora-LINK/Files/Pages/DashboardPage.xbf">
+					<Candidate type="Path">
+						<Value>Pages\DashboardPage.xbf</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="InputsPage.xbf" uri="ms-resource://Aurora-LINK/Files/Pages/InputsPage.xbf">
+					<Candidate type="Path">
+						<Value>Pages\InputsPage.xbf</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="LEDsPage.xbf" uri="ms-resource://Aurora-LINK/Files/Pages/LEDsPage.xbf">
+					<Candidate type="Path">
+						<Value>Pages\LEDsPage.xbf</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="ScenesPage.xbf" uri="ms-resource://Aurora-LINK/Files/Pages/ScenesPage.xbf">
+					<Candidate type="Path">
+						<Value>Pages\ScenesPage.xbf</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SystemPage.xbf" uri="ms-resource://Aurora-LINK/Files/Pages/SystemPage.xbf">
+					<Candidate type="Path">
+						<Value>Pages\SystemPage.xbf</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

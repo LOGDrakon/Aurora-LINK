@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>GEV-MAIN11</Machine>
+    <WindowsUser>MAINTENANCE</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|x64</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+    <PackageIdentityName>a8b43274-8e15-40f6-9be4-80f30953aa51</PackageIdentityName>
+    <PackageIdentityPublisher>CN=MAINTENANCE</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK %28Package%29\obj\x64\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>
+    </WindowsSdkPath>
+    <LayoutDir>C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK %28Package%29\bin\x64\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>2C3393FB61825E831573D73E11B8DF6AF03A3FDFA34FD7EF77F9512BFDED2602</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>a8b43274-8e15-40f6-9be4-80f30953aa51_1.0.0.0_x64__afc27tatmnrq8</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>a8b43274-8e15-40f6-9be4-80f30953aa51_afc27tatmnrq8!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>a8b43274-8e15-40f6-9be4-80f30953aa51</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=MAINTENANCE</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK %28Package%29\bin\x64\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2026-03-18T10:53:51.845</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.web.webview2\1.0.3179.45\buildTransitive\..\\runtimes\win-x64\native_uap\Microsoft.Web.WebView2.Core.dll">
+      <PackagePath>Microsoft.Web.WebView2.Core.dll</PackagePath>
+      <Modified>2025-03-30T09:04:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.web.webview2\1.0.3179.45\lib_manual\net6.0-windows10.0.17763.0\Microsoft.Web.WebView2.Core.Projection.dll">
+      <PackagePath>Microsoft.Web.WebView2.Core.Projection.dll</PackagePath>
+      <Modified>2025-03-30T09:03:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.web.webview2\1.0.3179.45\lib\Microsoft.Web.WebView2.Core.winmd">
+      <PackagePath>Microsoft.Web.WebView2.Core.winmd</PackagePath>
+      <Modified>2025-03-30T09:03:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK\bin\x64\Debug\net8.0-windows10.0.19041.0\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2026-03-18T10:53:48.861</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK\bin\x64\Debug\net8.0-windows10.0.19041.0\MainWindow.xbf">
+      <PackagePath>MainWindow.xbf</PackagePath>
+      <Modified>2026-03-18T10:53:48.862</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK %28Package%29\Images\SplashScreen.scale-200.png">
+      <PackagePath>Images\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2026-02-26T14:53:46.447</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK %28Package%29\Images\LockScreenLogo.scale-200.png">
+      <PackagePath>Images\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2026-02-26T14:53:46.445</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK %28Package%29\Images\Square150x150Logo.scale-200.png">
+      <PackagePath>Images\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2026-02-26T14:53:46.450</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK %28Package%29\Images\Square44x44Logo.scale-200.png">
+      <PackagePath>Images\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2026-02-26T14:53:46.451</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK %28Package%29\Images\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2026-02-26T14:53:46.454</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK %28Package%29\Images\StoreLogo.png">
+      <PackagePath>Images\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2026-02-26T14:53:46.456</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK %28Package%29\Images\Wide310x150Logo.scale-200.png">
+      <PackagePath>Images\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2026-02-26T14:53:46.458</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK %28Package%29\bin\x64\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2026-03-18T10:53:51.739</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.web.webview2\1.0.3179.45\runtimes\win-x64\native_uap\Microsoft.Web.WebView2.Core.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Web.WebView2.Core.dll</PackagePath>
+      <Modified>2025-03-30T09:04:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\link.client\1.0.0\lib\net8.0\LINK.Client.dll">
+      <PackagePath>Aurora-LINK\LINK.Client.dll</PackagePath>
+      <Modified>2026-03-18T08:30:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\link.core\1.0.0\lib\net8.0\LINK.Core.dll">
+      <PackagePath>Aurora-LINK\LINK.Core.dll</PackagePath>
+      <Modified>2026-03-18T08:30:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\link.transport.serial\1.0.0\lib\net8.0\LINK.Transport.Serial.dll">
+      <PackagePath>Aurora-LINK\LINK.Transport.Serial.dll</PackagePath>
+      <Modified>2026-03-18T08:30:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.ai\1.8.47\lib\net6.0-windows10.0.17763.0\Microsoft.Graphics.Imaging.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Graphics.Imaging.Projection.dll</PackagePath>
+      <Modified>2026-02-03T04:28:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.ai\1.8.47\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.AI.ContentSafety.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.AI.ContentSafety.Projection.dll</PackagePath>
+      <Modified>2026-02-03T04:28:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.ai\1.8.47\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.AI.Foundation.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.AI.Foundation.Projection.dll</PackagePath>
+      <Modified>2026-02-03T04:28:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.ai\1.8.47\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.AI.Imaging.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.AI.Imaging.Projection.dll</PackagePath>
+      <Modified>2026-02-03T04:28:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.ai\1.8.47\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.AI.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.AI.Projection.dll</PackagePath>
+      <Modified>2026-02-03T04:28:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.ai\1.8.47\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.AI.Text.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.AI.Text.Projection.dll</PackagePath>
+      <Modified>2026-02-03T04:28:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.Security.Authentication.OAuth.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Security.Authentication.OAuth.Projection.dll</PackagePath>
+      <Modified>2026-02-04T00:16:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.AppLifecycle.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.AppLifecycle.Projection.dll</PackagePath>
+      <Modified>2026-02-04T00:16:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.AppNotifications.Builder.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.AppNotifications.Builder.Projection.dll</PackagePath>
+      <Modified>2026-02-04T00:16:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.AppNotifications.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.AppNotifications.Projection.dll</PackagePath>
+      <Modified>2026-02-04T00:16:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.ApplicationModel.Background.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.ApplicationModel.Background.Projection.dll</PackagePath>
+      <Modified>2026-02-04T00:16:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll</PackagePath>
+      <Modified>2026-02-04T00:16:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.ApplicationModel.Resources.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.ApplicationModel.Resources.Projection.dll</PackagePath>
+      <Modified>2026-02-04T00:16:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll</PackagePath>
+      <Modified>2026-02-04T00:16:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.BadgeNotifications.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.BadgeNotifications.Projection.dll</PackagePath>
+      <Modified>2026-02-04T00:16:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.Foundation.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.Foundation.Projection.dll</PackagePath>
+      <Modified>2026-02-04T00:16:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.Management.Deployment.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.Management.Deployment.Projection.dll</PackagePath>
+      <Modified>2026-02-04T00:16:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.Media.Capture.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.Media.Capture.Projection.dll</PackagePath>
+      <Modified>2026-02-04T00:16:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.PushNotifications.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.PushNotifications.Projection.dll</PackagePath>
+      <Modified>2026-02-04T00:16:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.Security.AccessControl.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.Security.AccessControl.Projection.dll</PackagePath>
+      <Modified>2026-02-04T00:16:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.Storage.Pickers.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.Storage.Pickers.Projection.dll</PackagePath>
+      <Modified>2026-02-04T00:16:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.Storage.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.Storage.Projection.dll</PackagePath>
+      <Modified>2026-02-04T00:16:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.System.Power.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.System.Power.Projection.dll</PackagePath>
+      <Modified>2026-02-04T00:16:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.System.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.System.Projection.dll</PackagePath>
+      <Modified>2026-02-04T00:16:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\lib\net6.0-windows10.0.17763.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
+      <PackagePath>Aurora-LINK\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
+      <Modified>2026-02-04T00:16:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.interactiveexperiences\1.8.260125001\lib\net6.0-windows10.0.18362.0\Microsoft.InteractiveExperiences.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.InteractiveExperiences.Projection.dll</PackagePath>
+      <Modified>2026-01-25T08:58:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.ml\1.8.2124\lib\net8.0-windows10.0.17763.0\Microsoft.ML.OnnxRuntime.dll">
+      <PackagePath>Aurora-LINK\Microsoft.ML.OnnxRuntime.dll</PackagePath>
+      <Modified>2026-01-29T00:00:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.ml\1.8.2124\lib\net8.0-windows10.0.17763.0\Microsoft.Windows.AI.MachineLearning.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.AI.MachineLearning.Projection.dll</PackagePath>
+      <Modified>2026-01-29T00:00:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.widgets\1.8.251231004\lib\net6.0-windows10.0.17763.0\Microsoft.Windows.Widgets.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.Widgets.Projection.dll</PackagePath>
+      <Modified>2025-12-31T21:10:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.winui\1.8.260204000\lib\net6.0-windows10.0.17763.0\Microsoft.WinUI.dll">
+      <PackagePath>Aurora-LINK\Microsoft.WinUI.dll</PackagePath>
+      <Modified>2026-02-04T11:43:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\system.codedom\10.0.1\lib\net8.0\System.CodeDom.dll">
+      <PackagePath>Aurora-LINK\System.CodeDom.dll</PackagePath>
+      <Modified>2025-11-19T15:28:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\system.io.ports\10.0.1\lib\net8.0\System.IO.Ports.dll">
+      <PackagePath>Aurora-LINK\System.IO.Ports.dll</PackagePath>
+      <Modified>2025-11-19T15:28:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\system.management\10.0.1\lib\net8.0\System.Management.dll">
+      <PackagePath>Aurora-LINK\System.Management.dll</PackagePath>
+      <Modified>2025-11-19T15:30:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\system.numerics.tensors\9.0.0\lib\net8.0\System.Numerics.Tensors.dll">
+      <PackagePath>Aurora-LINK\System.Numerics.Tensors.dll</PackagePath>
+      <Modified>2024-10-29T02:40:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.web.webview2\1.0.3179.45\runtimes\win-arm64\native\WebView2Loader.dll">
+      <PackagePath>Aurora-LINK\runtimes\win-arm64\native\WebView2Loader.dll</PackagePath>
+      <Modified>2025-03-30T09:03:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.web.webview2\1.0.3179.45\runtimes\win-x64\native\WebView2Loader.dll">
+      <PackagePath>Aurora-LINK\runtimes\win-x64\native\WebView2Loader.dll</PackagePath>
+      <Modified>2025-03-30T09:04:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.web.webview2\1.0.3179.45\runtimes\win-x86\native\WebView2Loader.dll">
+      <PackagePath>Aurora-LINK\runtimes\win-x86\native\WebView2Loader.dll</PackagePath>
+      <Modified>2025-03-30T09:04:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\runtimes\win-arm64\native\Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll">
+      <PackagePath>Aurora-LINK\runtimes\win-arm64\native\Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll</PackagePath>
+      <Modified>2026-02-04T00:16:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\runtimes\win-arm64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
+      <PackagePath>Aurora-LINK\runtimes\win-arm64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+      <Modified>2026-02-04T00:16:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\runtimes\win-arm64ec\native\Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll">
+      <PackagePath>Aurora-LINK\runtimes\win-arm64ec\native\Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll</PackagePath>
+      <Modified>2026-02-04T00:15:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\runtimes\win-arm64ec\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
+      <PackagePath>Aurora-LINK\runtimes\win-arm64ec\native\Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+      <Modified>2026-02-04T00:15:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\runtimes\win-x64\native\Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll">
+      <PackagePath>Aurora-LINK\runtimes\win-x64\native\Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll</PackagePath>
+      <Modified>2026-02-04T00:15:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\runtimes\win-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
+      <PackagePath>Aurora-LINK\runtimes\win-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+      <Modified>2026-02-04T00:15:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\runtimes\win-x86\native\Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll">
+      <PackagePath>Aurora-LINK\runtimes\win-x86\native\Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll</PackagePath>
+      <Modified>2026-02-04T00:16:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.foundation\1.8.260203002\runtimes\win-x86\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
+      <PackagePath>Aurora-LINK\runtimes\win-x86\native\Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+      <Modified>2026-02-04T00:16:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\runtime.android-arm.runtime.native.system.io.ports\10.0.1\runtimes\android-arm\native\libSystem.IO.Ports.Native.so">
+      <PackagePath>Aurora-LINK\runtimes\android-arm\native\libSystem.IO.Ports.Native.so</PackagePath>
+      <Modified>2025-11-19T14:11:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\runtime.android-arm64.runtime.native.system.io.ports\10.0.1\runtimes\android-arm64\native\libSystem.IO.Ports.Native.so">
+      <PackagePath>Aurora-LINK\runtimes\android-arm64\native\libSystem.IO.Ports.Native.so</PackagePath>
+      <Modified>2025-11-19T14:17:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\runtime.android-x64.runtime.native.system.io.ports\10.0.1\runtimes\android-x64\native\libSystem.IO.Ports.Native.so">
+      <PackagePath>Aurora-LINK\runtimes\android-x64\native\libSystem.IO.Ports.Native.so</PackagePath>
+      <Modified>2025-11-19T14:18:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\runtime.android-x86.runtime.native.system.io.ports\10.0.1\runtimes\android-x86\native\libSystem.IO.Ports.Native.so">
+      <PackagePath>Aurora-LINK\runtimes\android-x86\native\libSystem.IO.Ports.Native.so</PackagePath>
+      <Modified>2025-11-19T14:10:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\runtime.linux-arm.runtime.native.system.io.ports\10.0.1\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so">
+      <PackagePath>Aurora-LINK\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so</PackagePath>
+      <Modified>2025-11-19T14:43:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\runtime.linux-arm64.runtime.native.system.io.ports\10.0.1\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so">
+      <PackagePath>Aurora-LINK\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so</PackagePath>
+      <Modified>2025-11-19T15:00:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\runtime.linux-bionic-arm64.runtime.native.system.io.ports\10.0.1\runtimes\linux-bionic-arm64\native\libSystem.IO.Ports.Native.so">
+      <PackagePath>Aurora-LINK\runtimes\linux-bionic-arm64\native\libSystem.IO.Ports.Native.so</PackagePath>
+      <Modified>2025-11-19T14:11:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\runtime.linux-bionic-x64.runtime.native.system.io.ports\10.0.1\runtimes\linux-bionic-x64\native\libSystem.IO.Ports.Native.so">
+      <PackagePath>Aurora-LINK\runtimes\linux-bionic-x64\native\libSystem.IO.Ports.Native.so</PackagePath>
+      <Modified>2025-11-19T14:11:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\runtime.linux-musl-arm.runtime.native.system.io.ports\10.0.1\runtimes\linux-musl-arm\native\libSystem.IO.Ports.Native.so">
+      <PackagePath>Aurora-LINK\runtimes\linux-musl-arm\native\libSystem.IO.Ports.Native.so</PackagePath>
+      <Modified>2025-11-19T14:44:18.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\runtime.linux-musl-arm64.runtime.native.system.io.ports\10.0.1\runtimes\linux-musl-arm64\native\libSystem.IO.Ports.Native.so">
+      <PackagePath>Aurora-LINK\runtimes\linux-musl-arm64\native\libSystem.IO.Ports.Native.so</PackagePath>
+      <Modified>2025-11-19T15:02:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\runtime.linux-musl-x64.runtime.native.system.io.ports\10.0.1\runtimes\linux-musl-x64\native\libSystem.IO.Ports.Native.so">
+      <PackagePath>Aurora-LINK\runtimes\linux-musl-x64\native\libSystem.IO.Ports.Native.so</PackagePath>
+      <Modified>2025-11-19T15:00:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\runtime.linux-x64.runtime.native.system.io.ports\10.0.1\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so">
+      <PackagePath>Aurora-LINK\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so</PackagePath>
+      <Modified>2025-11-19T14:59:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\runtime.maccatalyst-arm64.runtime.native.system.io.ports\10.0.1\runtimes\maccatalyst-arm64\native\libSystem.IO.Ports.Native.dylib">
+      <PackagePath>Aurora-LINK\runtimes\maccatalyst-arm64\native\libSystem.IO.Ports.Native.dylib</PackagePath>
+      <Modified>2025-11-19T14:09:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\runtime.maccatalyst-x64.runtime.native.system.io.ports\10.0.1\runtimes\maccatalyst-x64\native\libSystem.IO.Ports.Native.dylib">
+      <PackagePath>Aurora-LINK\runtimes\maccatalyst-x64\native\libSystem.IO.Ports.Native.dylib</PackagePath>
+      <Modified>2025-11-19T14:08:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\runtime.osx-arm64.runtime.native.system.io.ports\10.0.1\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib">
+      <PackagePath>Aurora-LINK\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib</PackagePath>
+      <Modified>2025-11-19T15:20:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\runtime.osx-x64.runtime.native.system.io.ports\10.0.1\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib">
+      <PackagePath>Aurora-LINK\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib</PackagePath>
+      <Modified>2025-11-19T15:30:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\system.io.ports\10.0.1\runtimes\unix\lib\net8.0\System.IO.Ports.dll">
+      <PackagePath>Aurora-LINK\runtimes\unix\lib\net8.0\System.IO.Ports.dll</PackagePath>
+      <Modified>2025-11-19T15:27:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\system.io.ports\10.0.1\runtimes\win\lib\net8.0\System.IO.Ports.dll">
+      <PackagePath>Aurora-LINK\runtimes\win\lib\net8.0\System.IO.Ports.dll</PackagePath>
+      <Modified>2025-11-19T15:27:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\system.management\10.0.1\runtimes\win\lib\net8.0\System.Management.dll">
+      <PackagePath>Aurora-LINK\runtimes\win\lib\net8.0\System.Management.dll</PackagePath>
+      <Modified>2025-11-19T15:30:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Windows.SDK.NET.dll</PackagePath>
+      <Modified>2024-11-11T17:23:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\WinRT.Runtime.dll">
+      <PackagePath>Aurora-LINK\WinRT.Runtime.dll</PackagePath>
+      <Modified>2024-11-11T17:23:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.web.webview2\1.0.3179.45\lib_manual\net8.0-windows10.0.17763.0\Microsoft.Web.WebView2.Core.Projection.dll">
+      <PackagePath>Aurora-LINK\Microsoft.Web.WebView2.Core.Projection.dll</PackagePath>
+      <Modified>2025-03-30T09:04:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK\bin\x64\Debug\net8.0-windows10.0.19041.0\Aurora-LINK.deps.json">
+      <PackagePath>Aurora-LINK\Aurora-LINK.deps.json</PackagePath>
+      <Modified>2026-03-18T10:53:49.976</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK\obj\x64\Debug\net8.0-windows10.0.19041.0\App.xbf">
+      <PackagePath>Aurora-LINK\App.xbf</PackagePath>
+      <Modified>2026-03-18T10:53:48.861</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK\obj\x64\Debug\net8.0-windows10.0.19041.0\MainWindow.xbf">
+      <PackagePath>Aurora-LINK\MainWindow.xbf</PackagePath>
+      <Modified>2026-03-18T10:53:48.862</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK\obj\x64\Debug\net8.0-windows10.0.19041.0\apphost.exe">
+      <PackagePath>Aurora-LINK\Aurora-LINK.exe</PackagePath>
+      <Modified>2026-03-18T10:53:49.535</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK\bin\x64\Debug\net8.0-windows10.0.19041.0\Aurora-LINK.runtimeconfig.json">
+      <PackagePath>Aurora-LINK\Aurora-LINK.runtimeconfig.json</PackagePath>
+      <Modified>2026-03-18T10:53:50.015</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK\bin\x64\Debug\net8.0-windows10.0.19041.0\Aurora-LINK.dll">
+      <PackagePath>Aurora-LINK\Aurora-LINK.dll</PackagePath>
+      <Modified>2026-03-18T10:53:49.501</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.runtime\1.8.260209005\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.8.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.8</Name>
+      <Version>8000.770.947.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.8, MinVersion = 8000.770.947.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.runtime\1.8.260209005\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.8.msix</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.runtime\1.8.260209005\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.8.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.8</Name>
+      <Version>8000.770.947.0</Version>
+      <Architecture>win32</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.8, MinVersion = 8000.770.947.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.runtime\1.8.260209005\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.8.msix</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.runtime\1.8.260209005\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.8.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.8</Name>
+      <Version>8000.770.947.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.8, MinVersion = 8000.770.947.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.runtime\1.8.260209005\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.8.msix</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.runtime\1.8.260209005\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.8.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.8</Name>
+      <Version>8000.770.947.0</Version>
+      <Architecture>arm64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.8, MinVersion = 8000.770.947.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\MAINTENANCE\.nuget\packages\microsoft.windowsappsdk.runtime\1.8.260209005\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.8.msix</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug.UWPDesktop</Name>
+      <Version>14.0.33728.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug.UWPDesktop, MinVersion = 14.0.33728.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.14.00.Desktop.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug.UWPDesktop</Name>
+      <Version>14.0.33728.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug.UWPDesktop, MinVersion = 14.0.33728.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.14.00.Desktop.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>
