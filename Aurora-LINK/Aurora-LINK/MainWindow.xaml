@@ -36,11 +36,6 @@
                         <SymbolIcon Symbol="Home" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="LEDs" Tag="LEDs">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE781;" />
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
                 <NavigationViewItem Content="Entrées" Tag="Inputs">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE9D5;" />
@@ -60,14 +55,78 @@
         </NavigationView>
 
         <!-- Zone principale -->
-        <Grid Grid.Column="1" Padding="24">
-            <Frame x:Name="ContentFrame" />
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
 
-            <TextBlock x:Name="ConnectionStatus"
-                       Text="Non connecté"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       FontSize="16" />
+            <!-- Barre d'outils projet -->
+            <CommandBar Grid.Row="0"
+                        DefaultLabelPosition="Right"
+                        Background="Transparent"
+                        IsOpen="False">
+                <AppBarButton x:Name="BtnNew" Icon="Page2" Label="Nouveau"
+                              Click="BtnNew_Click" />
+                <AppBarButton x:Name="BtnOpen" Icon="OpenFile" Label="Ouvrir"
+                              Click="BtnOpen_Click" />
+                <AppBarButton x:Name="BtnSave" Icon="Save" Label="Enregistrer"
+                              Click="BtnSave_Click" />
+                <AppBarButton x:Name="BtnSaveAs" Label="Enregistrer sous…"
+                              Click="BtnSaveAs_Click">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE792;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarSeparator />
+                <AppBarButton x:Name="BtnExportFlora" Label="Exporter .flora"
+                              Click="BtnExportFlora_Click">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xEDE1;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton x:Name="BtnImportFlora" Label="Importer .flora"
+                              Click="BtnImportFlora_Click">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE150;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarSeparator />
+                <AppBarButton x:Name="BtnUpload" Label="Téléverser"
+                              Click="BtnUpload_Click">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE898;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+            </CommandBar>
+
+            <Frame x:Name="ContentFrame" Grid.Row="1" />
+
+            <Border Grid.Row="2"
+                    Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                    BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                    BorderThickness="0,1,0,0"
+                    Padding="16,6">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock x:Name="ConnectionStatus"
+                               Grid.Column="0"
+                               Text="Non connecté"
+                               FontSize="12"
+                               Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                               VerticalAlignment="Center" />
+                    <TextBlock x:Name="ProjectStatus"
+                               Grid.Column="1"
+                               Text="Nouveau projet"
+                               FontSize="12"
+                               Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                               VerticalAlignment="Center" />
+                </Grid>
+            </Border>
         </Grid>
     </Grid>
 </Window>

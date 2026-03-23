@@ -77,7 +77,7 @@ public sealed class ConnectionDialog
             Title = "Connexion LINK",
             Content = panel,
             PrimaryButtonText = "Connecter",
-            CloseButtonText = "Annuler",
+            CloseButtonText = "Quitter",
             DefaultButton = ContentDialogButton.Primary,
             IsPrimaryButtonEnabled = false,
             XamlRoot = xamlRoot

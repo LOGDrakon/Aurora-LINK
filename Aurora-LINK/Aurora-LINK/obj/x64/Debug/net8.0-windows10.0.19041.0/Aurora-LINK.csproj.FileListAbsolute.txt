@@ -138,3 +138,4 @@ C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK\
 C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK\obj\x64\Debug\net8.0-windows10.0.19041.0\Pages\LEDsPage.xbf
 C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK\obj\x64\Debug\net8.0-windows10.0.19041.0\Pages\ScenesPage.xbf
 C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK\obj\x64\Debug\net8.0-windows10.0.19041.0\Pages\SystemPage.xbf
+C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK\obj\x64\Debug\net8.0-windows10.0.19041.0\Aurora-LINK.sourcelink.json
