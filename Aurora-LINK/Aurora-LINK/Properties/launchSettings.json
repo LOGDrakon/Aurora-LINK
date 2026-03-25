@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Aurora-LINK (Unpackaged)": {
+      "commandName": "Project",
+      "commandLineArgs": "",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

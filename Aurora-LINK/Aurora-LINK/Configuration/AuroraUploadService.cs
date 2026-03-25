@@ -14,18 +14,16 @@ namespace Aurora_LINK.Configuration;
 ///   2. UPLOAD:DATA:&lt;seq&gt;:&lt;hex&gt;  → device répond OK (paquet reçu)
 ///   3. UPLOAD:END                 → device vérifie l'intégrité, répond OK ou ERR
 ///
-/// Contrainte matérielle STM32 : buffer USB FS = 64 bytes max par trame.
-///   Overhead DATA = "LINK:AURORA:UPLOAD:DATA:" (25) + seq + ":" (≤4) + "\0" (1) = 30
-///   → payload hex max = 64 − 30 = 34 chars = 17 octets bruts par paquet.
+/// Le SDK LINK gère le fractionnement des trames &gt;64 bytes au niveau transport.
 /// </summary>
 public static class AuroraUploadService
 {
     private const string AppId = "AURORA";
     private const string Command = "UPLOAD";
 
-    // Trame complète ≤ 64 bytes : 25 (préfixe) + 4 (seq:) + 2×N (hex) + 1 (\0) ≤ 64
-    // → N ≤ 17 octets bruts
-    private const int MaxChunkSize = 17;
+    // Le SDK gère le fractionnement des trames au niveau transport.
+    // 128 octets bruts par paquet = bon compromis vitesse/fiabilité.
+    private const int MaxChunkSize = 128;
 
     /// <summary>
     /// Envoie un programme .flora vers le device connecté.
@@ -46,7 +44,7 @@ public static class AuroraUploadService
 
         ValidateResponse(startFrame, "Le device a refusé le téléversement");
 
-        // 2. DATA — envoyer les paquets séquentiels (trame ≤ 64 bytes)
+        // 2. DATA — envoyer les paquets séquentiels
         int seq = 0;
         for (int offset = 0; offset < data.Length; offset += MaxChunkSize)
         {

@@ -72,19 +72,40 @@ namespace Aurora_LINK
                     string port = ConnectedDevice?.PortName ?? "";
 
                     ConnectionStatus.Text = $"Connecté à {model} ({port})";
+                    BtnReconnect.Visibility = Visibility.Visible;
 
                     NavView.SelectedItem = NavView.MenuItems[0];
                 }
                 else
                 {
-                    Close();
-                    return;
+                    ConnectionStatus.Text = "Non connecté";
+                    BtnReconnect.Visibility = Visibility.Visible;
                 }
             }
             catch (Exception ex)
             {
                 ConnectionStatus.Text = $"Erreur de connexion : {ex.Message}";
+                BtnReconnect.Visibility = Visibility.Visible;
             }
+        }
+
+        private async void BtnReconnect_Click(object sender, RoutedEventArgs e)
+        {
+            await DisconnectCurrentAsync();
+            await ShowConnectionDialogAsync();
+        }
+
+        private async Task DisconnectCurrentAsync()
+        {
+            if (Transport is IAsyncDisposable asyncDisposable)
+            {
+                await asyncDisposable.DisposeAsync();
+            }
+
+            Client = null;
+            Transport = null;
+            ConnectedDevice = null;
+            ConnectionStatus.Text = "Non connecté";
         }
 
         // ───────────────── Gestion de projet ─────────────────

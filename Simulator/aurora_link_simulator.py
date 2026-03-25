@@ -12,22 +12,34 @@ To create a pair of virtual COM ports you can use:
 
 The simulator connects to one end of the pair; point Aurora-LINK at the other.
 
-The device starts in LOCKED state.  Once the client authenticates (AUTH),
-the simulator sends a single GETINPUT frame with the current input states.
-After that, each console input change (Ix=ON/OFF) pushes a new GETINPUT.
+The device starts in LOCKED state.  Once the client authenticates via the
+challenge-response AUTH flow (AUTH_INIT + AUTH), the simulator sends a
+single GETINPUT frame with the current input states.  After that, each
+console input change (Ix=ON/OFF) pushes a new GETINPUT.
+
+Authentication uses a challenge-response mechanism:
+  1. GETV announces HASH=<algo> and LOCKED=true
+  2. Client sends AUTH_INIT\x1f<clientNonce> — simulator replies with <deviceNonce>
+  3. Client sends AUTH\x1f<hex_digest> where digest = HASH(clientNonce + deviceNonce + HASH(password))
+  The device stores only HASH(password), never the plaintext.
+  No password material is ever transmitted in clear text.
+
+Field separator: \x1f (Unit Separator, ASCII 31) — LINK v2.0
 
 Supported LINK frames (received from client):
-  LINK:GETAPP\0
-  LINK:AURORA:GETV\0
-  LINK:AURORA:AUTH:<password>\0
-  LINK:AURORA:PING\0
-  LINK:AURORA:UPLOAD:START:<size>\0     -> OK (ready to receive)
-  LINK:AURORA:UPLOAD:DATA:<seq>:<hex>\0 -> OK (chunk received, max 64 raw bytes)
-  LINK:AURORA:UPLOAD:END\0              -> OK or ERR (integrity check)
-  LINK:AURORA:<any>\0                   -> ERR:UNKNOWN_COMMAND
+  LINK\x1fGETAPP\0
+  LINK\x1fAURORA\x1fGETV\0
+  LINK\x1fAURORA\x1fAUTH_INIT\x1f<clientNonce>\0  -> <deviceNonce>
+  LINK\x1fAURORA\x1fAUTH\x1f<hashedPassword>\0   -> OK or ERR (challenge-response)
+  LINK\x1fAURORA\x1fPING\0
+  LINK\x1fAURORA\x1fUPLOAD\x1fSTART\x1f<size>\0      -> OK (ready to receive)
+  LINK\x1fAURORA\x1fUPLOAD\x1fDATA\x1f<seq>\x1f<hex>\0  -> OK (chunk received)
+  LINK\x1fAURORA\x1fUPLOAD\x1fEND\0               -> OK or ERR (integrity check)
+  LINK\x1fAURORA\x1fDONE\0                     -> OK (end of exchange)
+  LINK\x1fAURORA\x1f<any>\0                    -> ERR\x1fUNKNOWN_COMMAND
 
 Pushed frames (sent to client after connection):
-  LINK:AURORA:GETINPUT:<I0><I1>...<I9>\0
+  LINK\x1fAURORA\x1fGETINPUT\x1f<I0><I1>...<I9>\0
     Each <Ix> is '0' (OFF) or '1' (ON).
 
 Interactive console commands:
@@ -46,6 +58,8 @@ Requirements:
 
 import argparse
 import binascii
+import hashlib
+import os
 import sys
 import threading
 from dataclasses import dataclass, field
@@ -65,21 +79,47 @@ except ImportError:
 # ---------------------------------------------------------------------------
 
 INPUT_COUNT = 10
+DEFAULT_MAX_PACKET_SIZE = 64  # STM32 USB FS buffer limit
+
+# Supported hash methods — maps name announced in GETV to hashlib constructor
+HASH_ALGORITHMS: dict[str, str] = {
+    "SHA1": "sha1",
+    "SHA256": "sha256",
+    "SHA384": "sha384",
+    "SHA512": "sha512",
+}
+
 
 @dataclass
 class DeviceState:
     app_id: str = "AURORA"
-    link_version: str = "LINKv1.1"
+    link_version: str = "LINKv2.0"
     uid: str = "0xAUR00001"
     model: str = "Aurora-LED"
     enc: str = "NONE"
+    hash_method: str = "SHA256"
     locked: bool = True
     connected: bool = False
-    password: str = "aurora"
+    password_hash: str = ""  # HASH(password) — device never stores plaintext
     inputs: list = field(default_factory=lambda: [False] * INPUT_COUNT)
     upload_buffer: bytearray = field(default_factory=bytearray)
     upload_expected_size: int = 0
     upload_seq: int = 0
+    # Auth nonces (populated during AUTH_INIT)
+    client_nonce: str = ""
+    device_nonce: str = ""
+
+    def hash_password(self, password: str) -> str:
+        """Compute HASH(password) — the value stored on device.
+
+        Returns lowercase hex to match the LINK SDK's ComputeHash format.
+        """
+        algo_name = HASH_ALGORITHMS.get(self.hash_method)
+        if not algo_name:
+            raise ValueError(f"Unsupported hash method: {self.hash_method}")
+        h = hashlib.new(algo_name)
+        h.update(password.encode("utf-8"))
+        return h.hexdigest()
 
     def getv_args(self) -> list:
         return [
@@ -87,8 +127,33 @@ class DeviceState:
             f"UID={self.uid}",
             f"MODEL={self.model}",
             f"ENC={self.enc}",
+            f"HASH={self.hash_method}",
             f"LOCKED={'true' if self.locked else 'false'}",
         ]
+
+    def compute_auth_hash(self) -> str:
+        """Compute HASH(clientNonce + deviceNonce + password_hash)."""
+        algo_name = HASH_ALGORITHMS.get(self.hash_method)
+        if not algo_name:
+            raise ValueError(f"Unsupported hash method: {self.hash_method}")
+        h = hashlib.new(algo_name)
+        h.update((self.client_nonce + self.device_nonce
+                  + self.password_hash).encode("utf-8"))
+        return h.hexdigest().upper()
+
+    def compute_encryption_key(self) -> bytes:
+        """Compute HASH(deviceNonce + clientNonce + password_hash) as XOR key.
+
+        Nonce order is reversed compared to compute_auth_hash so the key
+        is never equal to the verification hash sent on the wire.
+        """
+        algo_name = HASH_ALGORITHMS.get(self.hash_method)
+        if not algo_name:
+            raise ValueError(f"Unsupported hash method: {self.hash_method}")
+        h = hashlib.new(algo_name)
+        h.update((self.device_nonce + self.client_nonce
+                  + self.password_hash).encode("utf-8"))
+        return bytes.fromhex(h.hexdigest())
 
     def input_payload(self) -> str:
         """Returns e.g. '0100000000' for the 10 inputs."""
@@ -99,20 +164,23 @@ class DeviceState:
 # Frame helpers
 # ---------------------------------------------------------------------------
 
+SEPARATOR = "\x1f"  # Unit Separator (ASCII 31) — LINK v2.0
+
+
 def build_frame(app_id: str | None, command: str, *args) -> bytes:
     parts = ["LINK"]
     if app_id:
         parts.append(app_id)
     parts.append(command)
     parts.extend(args)
-    return (":".join(parts) + "\0").encode("latin-1")
+    return (SEPARATOR.join(parts) + "\0").encode("latin-1")
 
 
 def parse_frame(raw: str) -> dict:
     if not raw.strip():
         raise ValueError("empty frame")
 
-    parts = [p for p in raw.split(":") if p != ""]
+    parts = [p for p in raw.split(SEPARATOR) if p != ""]
     if len(parts) < 2 or parts[0] != "LINK":
         raise ValueError(f"invalid LINK frame: {raw!r}")
 
@@ -159,10 +227,12 @@ def verify_flora(data: bytearray) -> bool:
 
 class SerialHandler:
     def __init__(self, ser: serial.Serial, state: DeviceState,
-                 verbose: bool = True):
+                 verbose: bool = True,
+                 max_packet_size: int = DEFAULT_MAX_PACKET_SIZE):
         self.ser = ser
         self.state = state
         self.verbose = verbose
+        self.max_packet_size = max_packet_size
         self._buf = bytearray()
         self._running = False
         self._lock = threading.Lock()
@@ -173,9 +243,15 @@ class SerialHandler:
                   file=sys.stderr, flush=True)
 
     def send(self, payload: bytes):
+        """Send a frame, fragmenting into max_packet_size chunks like STM32 USB FS."""
         with self._lock:
-            self.ser.write(payload)
-        self.log(f"TX {payload!r}")
+            mps = self.max_packet_size
+            if mps > 0 and len(payload) > mps:
+                for offset in range(0, len(payload), mps):
+                    self.ser.write(payload[offset:offset + mps])
+            else:
+                self.ser.write(payload)
+        self.log(f"TX ({len(payload)}B) {payload!r}")
 
     def send_input_state(self):
         """Push current input states to the client."""
@@ -215,10 +291,31 @@ class SerialHandler:
                                   *state.getv_args()))
             return
 
-        # --- AUTH ---
+        # --- AUTH_INIT (nonce exchange) ---
+        if command == "AUTH_INIT":
+            client_nonce = args[0] if args else ""
+            if not client_nonce:
+                self.send(build_frame(state.app_id, "RETURN", "AUTH_INIT",
+                                      "ERR", "MISSING_NONCE"))
+                return
+            state.client_nonce = client_nonce
+            state.device_nonce = os.urandom(32).hex().upper()
+            self.send(build_frame(state.app_id, "RETURN", "AUTH_INIT",
+                                  state.device_nonce))
+            self.log(f"AUTH_INIT — client_nonce={client_nonce[:16]}... "
+                     f"device_nonce={state.device_nonce[:16]}...")
+            return
+
+        # --- AUTH (challenge-response) ---
         if command == "AUTH":
-            supplied = args[0] if args else ""
-            if supplied == state.password:
+            supplied_hash = (args[0] if args else "").upper()
+            if not state.client_nonce or not state.device_nonce:
+                self.send(build_frame(state.app_id, "RETURN", "AUTH",
+                                      "ERR", "NO_AUTH_INIT"))
+                self.log("AUTH failed — AUTH_INIT not performed")
+                return
+            expected_hash = state.compute_auth_hash()
+            if supplied_hash == expected_hash:
                 state.locked = False
                 state.connected = True
                 self.send(build_frame(state.app_id, "RETURN", "AUTH", "OK"))
@@ -227,7 +324,18 @@ class SerialHandler:
                 self.send_input_state()
             else:
                 self.send(build_frame(state.app_id, "RETURN", "AUTH", "ERR"))
-                self.log(f"AUTH failed (got {supplied!r})")
+                self.log(f"AUTH failed (hash mismatch)")
+            return
+
+        # --- CHPASSWD (change password) ---
+        if command == "CHPASSWD":
+            self._handle_chpasswd(args)
+            return
+
+        # --- DONE (end of exchange) ---
+        if command == "DONE":
+            self.send(build_frame(state.app_id, "RETURN", "DONE", "OK"))
+            self.log("DONE — exchange complete")
             return
 
         # --- PING ---
@@ -243,6 +351,75 @@ class SerialHandler:
         # --- Unknown ---
         self.send(build_frame(state.app_id, "RETURN", command,
                               "ERR", "UNKNOWN_COMMAND"))
+
+    def _handle_chpasswd(self, args: list):
+        """Handle CHPASSWD command: verify old password and set new one.
+
+        Protocol:
+          LINK\x1fAURORA\x1fCHPASSWD\x1f<hashedOld>\x1f<encryptedNewHash>\0
+
+        - hashedOld        = HASH(clientNonce + deviceNonce + HASH(oldPassword))
+        - encryptedNewHash = HEX(XOR(HASH(newPassword)_bytes, encryption_key))
+          where encryption_key = HASH(deviceNonce + clientNonce + HASH(oldPassword))
+          (reversed nonce order so key differs from verification hash).
+
+        The device never sees any plaintext password.  It stores and
+        compares only HASH(password) values.
+        """
+        state = self.state
+        app = state.app_id
+
+        if state.locked:
+            self.send(build_frame(app, "RETURN", "CHPASSWD",
+                                  "ERR", "LOCKED"))
+            self.log("CHPASSWD rejected — device is locked")
+            return
+
+        if len(args) < 2:
+            self.send(build_frame(app, "RETURN", "CHPASSWD",
+                                  "ERR", "MISSING_ARGS"))
+            return
+
+        if not state.client_nonce or not state.device_nonce:
+            self.send(build_frame(app, "RETURN", "CHPASSWD",
+                                  "ERR", "NO_AUTH_INIT"))
+            self.log("CHPASSWD failed — AUTH_INIT not performed")
+            return
+
+        supplied_hash = args[0].upper()
+        encrypted_hex = args[1].upper()
+
+        # Verify old password via HASH(nonces + stored_password_hash)
+        expected_hash = state.compute_auth_hash()
+        if supplied_hash != expected_hash:
+            self.send(build_frame(app, "RETURN", "CHPASSWD",
+                                  "ERR", "INVALID_PASSWORD"))
+            self.log("CHPASSWD failed — old password mismatch")
+            return
+
+        # Decrypt new password hash using XOR with encryption key
+        enc_key = state.compute_encryption_key()
+
+        try:
+            encrypted_bytes = bytes.fromhex(encrypted_hex)
+        except ValueError:
+            self.send(build_frame(app, "RETURN", "CHPASSWD",
+                                  "ERR", "INVALID_HEX"))
+            return
+
+        new_hash_bytes = bytes(
+            a ^ b for a, b in zip(encrypted_bytes, enc_key)
+        )
+        new_password_hash = new_hash_bytes.hex()
+
+        if not new_password_hash:
+            self.send(build_frame(app, "RETURN", "CHPASSWD",
+                                  "ERR", "WEAK_PASSWORD"))
+            return
+
+        state.password_hash = new_password_hash
+        self.send(build_frame(app, "RETURN", "CHPASSWD", "OK"))
+        self.log("CHPASSWD OK — password hash updated")
 
     def _handle_upload(self, args: list):
         """Handle UPLOAD sub-commands: START, DATA, END."""
@@ -458,15 +635,23 @@ def main():
                         help="Device model name (default: Aurora-LED)")
     parser.add_argument("--uid", default="0xAUR00001",
                         help="Device UID (default: 0xAUR00001)")
+    parser.add_argument("--hash", default="SHA256",
+                        choices=list(HASH_ALGORITHMS.keys()),
+                        help="Hash algorithm for AUTH (default: SHA256)")
+    parser.add_argument("--max-packet-size", type=int,
+                        default=DEFAULT_MAX_PACKET_SIZE,
+                        help=f"Max TX packet size in bytes, 0=no chunking "
+                             f"(default: {DEFAULT_MAX_PACKET_SIZE})")
     parser.add_argument("--quiet", action="store_true",
                         help="Suppress verbose frame logging")
     args = parser.parse_args()
 
     state = DeviceState(
-        password=args.password,
         model=args.model,
         uid=args.uid,
+        hash_method=args.hash,
     )
+    state.password_hash = state.hash_password(args.password)
 
     ser = serial.Serial(
         port=args.port,
@@ -477,7 +662,8 @@ def main():
         timeout=0.5,
     )
 
-    handler = SerialHandler(ser, state, verbose=not args.quiet)
+    handler = SerialHandler(ser, state, verbose=not args.quiet,
+                            max_packet_size=args.max_packet_size)
 
     print(
         f"[AURORA-SIM] Simulateur Aurora sur {ser.port} "
@@ -485,7 +671,7 @@ def main():
         file=sys.stderr, flush=True,
     )
     print(
-        f"[AURORA-SIM] Appareil VERROUILLÉ — mot de passe: {state.password!r}",
+        f"[AURORA-SIM] Appareil VERROUILLÉ — hash stocké: {state.password_hash[:16]}...",
         file=sys.stderr, flush=True,
     )
 

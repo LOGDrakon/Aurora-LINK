@@ -1,9 +1,13 @@
 using System;
 using System.Collections.Specialized;
+using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using Link.Client;
 using Link.Client.Discovery;
-using Link.Client.Extensions;
+using Link.Client.Hashing;
+using Link.Client.Models;
+using Link.Core.Frames;
 using Link.Core.Transport;
 using Link.Transport.Serial;
 using Microsoft.UI.Dispatching;
@@ -79,7 +83,7 @@ public sealed class ConnectionDialog
             Title = "Connexion LINK",
             Content = panel,
             PrimaryButtonText = "Connecter",
-            CloseButtonText = "Quitter",
+            CloseButtonText = "Annuler",
             DefaultButton = ContentDialogButton.Primary,
             IsPrimaryButtonEnabled = false,
             XamlRoot = xamlRoot
@@ -125,7 +129,7 @@ public sealed class ConnectionDialog
 
                 if (device.DeviceInfo.IsLocked)
                 {
-                    IsAuthenticated = await ShowAuthDialogAsync(client);
+                    IsAuthenticated = await ShowAuthDialogAsync(client, device.DeviceInfo);
                 }
                 else
                 {
@@ -186,7 +190,7 @@ public sealed class ConnectionDialog
         _dialog.IsPrimaryButtonEnabled = _comboBox.SelectedItem is LinkDetectedDevice;
     }
 
-    private async Task<bool> ShowAuthDialogAsync(LinkClient client)
+    private async Task<bool> ShowAuthDialogAsync(LinkClient client, LinkDeviceInfo deviceInfo)
     {
         var passwordBox = new PasswordBox
         {
@@ -233,8 +237,29 @@ public sealed class ConnectionDialog
 
             try
             {
-                var state = await client.AuthenticateAsync("AURORA", password);
-                if (state.IsAuthenticated)
+                var hashProvider = LinkHashProviderFactory.Create(deviceInfo.HashMethod)
+                    ?? throw new NotSupportedException(
+                        $"Hash method not supported: {deviceInfo.HashMethod}");
+
+                // AUTH_INIT — nonce exchange
+                string clientNonce = Convert.ToHexString(
+                    RandomNumberGenerator.GetBytes(32)).ToLowerInvariant();
+
+                var initFrame = await client.SendCommandAsync(
+                    "AURORA", "AUTH_INIT", default, clientNonce);
+
+                string deviceNonce = initFrame.ReturnArguments.FirstOrDefault()
+                    ?? throw new InvalidOperationException("Device nonce missing");
+
+                // AUTH — HASH(nonces + HASH(password))
+                string passwordHash = hashProvider.ComputeHash(password);
+                string authDigest = hashProvider.ComputeHash(
+                    clientNonce + deviceNonce + passwordHash);
+
+                var authFrame = await client.SendCommandAsync(
+                    "AURORA", "AUTH", default, authDigest);
+
+                if (authFrame.ReturnArguments.FirstOrDefault() == "OK")
                     return true;
 
                 errorText.Text = "Mot de passe incorrect.";

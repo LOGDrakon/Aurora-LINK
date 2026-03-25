@@ -2,11 +2,12 @@
   "version": 3,
   "targets": {
     "net8.0-windows10.0.19041": {
-      "LINK.Client/1.0.0": {
+      "LINK.Client/2.0.1": {
         "type": "package",
         "dependencies": {
-          "LINK.Core": "1.0.0",
-          "LINK.Transport.Serial": "1.0.0",
+          "LINK.Core": "2.0.1",
+          "LINK.Transport.Serial": "2.0.1",
+          "System.IO.Hashing": "9.0.5",
           "System.Management": "10.0.1"
         },
         "compile": {
@@ -20,7 +21,7 @@
           }
         }
       },
-      "LINK.Core/1.0.0": {
+      "LINK.Core/2.0.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/LINK.Core.dll": {
@@ -33,10 +34,10 @@
           }
         }
       },
-      "LINK.Transport.Serial/1.0.0": {
+      "LINK.Transport.Serial/2.0.1": {
         "type": "package",
         "dependencies": {
-          "LINK.Core": "1.0.0",
+          "LINK.Core": "2.0.1",
           "System.IO.Ports": "10.0.1"
         },
         "compile": {
@@ -1519,6 +1520,22 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "System.IO.Hashing/9.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "System.IO.Ports/10.0.1": {
         "type": "package",
         "dependencies": {
@@ -1591,11 +1608,12 @@
       }
     },
     "net8.0-windows10.0.19041/win-arm64": {
-      "LINK.Client/1.0.0": {
+      "LINK.Client/2.0.1": {
         "type": "package",
         "dependencies": {
-          "LINK.Core": "1.0.0",
-          "LINK.Transport.Serial": "1.0.0",
+          "LINK.Core": "2.0.1",
+          "LINK.Transport.Serial": "2.0.1",
+          "System.IO.Hashing": "9.0.5",
           "System.Management": "10.0.1"
         },
         "compile": {
@@ -1609,7 +1627,7 @@
           }
         }
       },
-      "LINK.Core/1.0.0": {
+      "LINK.Core/2.0.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/LINK.Core.dll": {
@@ -1622,10 +1640,10 @@
           }
         }
       },
-      "LINK.Transport.Serial/1.0.0": {
+      "LINK.Transport.Serial/2.0.1": {
         "type": "package",
         "dependencies": {
-          "LINK.Core": "1.0.0",
+          "LINK.Core": "2.0.1",
           "System.IO.Ports": "10.0.1"
         },
         "compile": {
@@ -2011,6 +2029,22 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "System.IO.Hashing/9.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "System.IO.Ports/10.0.1": {
         "type": "package",
         "dependencies": {
@@ -2067,11 +2101,12 @@
       }
     },
     "net8.0-windows10.0.19041/win-x64": {
-      "LINK.Client/1.0.0": {
+      "LINK.Client/2.0.1": {
         "type": "package",
         "dependencies": {
-          "LINK.Core": "1.0.0",
-          "LINK.Transport.Serial": "1.0.0",
+          "LINK.Core": "2.0.1",
+          "LINK.Transport.Serial": "2.0.1",
+          "System.IO.Hashing": "9.0.5",
           "System.Management": "10.0.1"
         },
         "compile": {
@@ -2085,7 +2120,7 @@
           }
         }
       },
-      "LINK.Core/1.0.0": {
+      "LINK.Core/2.0.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/LINK.Core.dll": {
@@ -2098,10 +2133,10 @@
           }
         }
       },
-      "LINK.Transport.Serial/1.0.0": {
+      "LINK.Transport.Serial/2.0.1": {
         "type": "package",
         "dependencies": {
-          "LINK.Core": "1.0.0",
+          "LINK.Core": "2.0.1",
           "System.IO.Ports": "10.0.1"
         },
         "compile": {
@@ -2487,6 +2522,22 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "System.IO.Hashing/9.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "System.IO.Ports/10.0.1": {
         "type": "package",
         "dependencies": {
@@ -2543,11 +2594,12 @@
       }
     },
     "net8.0-windows10.0.19041/win-x86": {
-      "LINK.Client/1.0.0": {
+      "LINK.Client/2.0.1": {
         "type": "package",
         "dependencies": {
-          "LINK.Core": "1.0.0",
-          "LINK.Transport.Serial": "1.0.0",
+          "LINK.Core": "2.0.1",
+          "LINK.Transport.Serial": "2.0.1",
+          "System.IO.Hashing": "9.0.5",
           "System.Management": "10.0.1"
         },
         "compile": {
@@ -2561,7 +2613,7 @@
           }
         }
       },
-      "LINK.Core/1.0.0": {
+      "LINK.Core/2.0.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/LINK.Core.dll": {
@@ -2574,10 +2626,10 @@
           }
         }
       },
-      "LINK.Transport.Serial/1.0.0": {
+      "LINK.Transport.Serial/2.0.1": {
         "type": "package",
         "dependencies": {
-          "LINK.Core": "1.0.0",
+          "LINK.Core": "2.0.1",
           "System.IO.Ports": "10.0.1"
         },
         "compile": {
@@ -2963,6 +3015,22 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "System.IO.Hashing/9.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "System.IO.Ports/10.0.1": {
         "type": "package",
         "dependencies": {
@@ -3020,10 +3088,10 @@
     }
   },
   "libraries": {
-    "LINK.Client/1.0.0": {
-      "sha512": "y/uR1PxLlU9N//V5zpHdfF48nLwmlnQ6XfoW16JTAe9utOUgSNuUkJHFEJzAFJn2Uuo5CpPLZtDjZiYkugHVwA==",
+    "LINK.Client/2.0.1": {
+      "sha512": "W9LFEDlTcYr7VIa5fdwG+UhbOAqIYUDITbOQyrEgwuDn8eYlmDj0n8mZHVGVMQQD//3bKmn1PXSvpOnS6Tch1g==",
       "type": "package",
-      "path": "link.client/1.0.0",
+      "path": "link.client/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3031,14 +3099,14 @@
         "README.md",
         "lib/net8.0/LINK.Client.dll",
         "lib/net8.0/LINK.Client.xml",
-        "link.client.1.0.0.nupkg.sha512",
+        "link.client.2.0.1.nupkg.sha512",
         "link.client.nuspec"
       ]
     },
-    "LINK.Core/1.0.0": {
-      "sha512": "4JBw08EqPlLnFdlv8fr9AfcUXLyRLfvYJV/lTzHyoSPD0J8EQ8/mY/8f0U+9FYyMU0TqsIumtPtC1xB1NS4hng==",
+    "LINK.Core/2.0.1": {
+      "sha512": "tE02l8sZhaZdD+/kgCnEGqh/7XrPdbRKJL5x63ydcS4+713WG5BtFbUdZLgS9NPYcc48foAX0hBFUcXt9ADXHA==",
       "type": "package",
-      "path": "link.core/1.0.0",
+      "path": "link.core/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3046,14 +3114,14 @@
         "README.md",
         "lib/net8.0/LINK.Core.dll",
         "lib/net8.0/LINK.Core.xml",
-        "link.core.1.0.0.nupkg.sha512",
+        "link.core.2.0.1.nupkg.sha512",
         "link.core.nuspec"
       ]
     },
-    "LINK.Transport.Serial/1.0.0": {
-      "sha512": "IEpEF4uWhqnRSG+QWh81dKaz+Ii2t82OqZbS/VjjILqRzhp5yP0JDXxGnitLH5Axp4UccOyugN/a3wiR0fGOgQ==",
+    "LINK.Transport.Serial/2.0.1": {
+      "sha512": "3G4oJadXnTR8u71MS2Z086PomcoXW/Ng3Y22IdSUZ+7ATSn2oAUvj5eCqMYF1okstRzCGCoPnnZRAnPd+IYdkQ==",
       "type": "package",
-      "path": "link.transport.serial/1.0.0",
+      "path": "link.transport.serial/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3061,7 +3129,7 @@
         "README.md",
         "lib/net8.0/LINK.Transport.Serial.dll",
         "lib/net8.0/LINK.Transport.Serial.xml",
-        "link.transport.serial.1.0.0.nupkg.sha512",
+        "link.transport.serial.2.0.1.nupkg.sha512",
         "link.transport.serial.nuspec"
       ]
     },
@@ -5484,6 +5552,34 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.IO.Hashing/9.0.5": {
+      "sha512": "iFhbuwiertFWWVlbOtfVV2MaojUW0/eQ2AKkBcjvmWHYw2orW5OiTHPqAeB7ny5+s09EQaZaQmX4SIpGX8HUdg==",
+      "type": "package",
+      "path": "system.io.hashing/9.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.IO.Hashing.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.IO.Hashing.targets",
+        "lib/net462/System.IO.Hashing.dll",
+        "lib/net462/System.IO.Hashing.xml",
+        "lib/net8.0/System.IO.Hashing.dll",
+        "lib/net8.0/System.IO.Hashing.xml",
+        "lib/net9.0/System.IO.Hashing.dll",
+        "lib/net9.0/System.IO.Hashing.xml",
+        "lib/netstandard2.0/System.IO.Hashing.dll",
+        "lib/netstandard2.0/System.IO.Hashing.xml",
+        "system.io.hashing.9.0.5.nupkg.sha512",
+        "system.io.hashing.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.IO.Ports/10.0.1": {
       "sha512": "2aDgBhEsZzlJBYqcI7bvEL6IsWq1KWGNdilscFIxW48QBoTQbxES0aVhB8YmvVZXwEVrcUQb4XNShBmsqg/l3Q==",
       "type": "package",
@@ -5588,9 +5684,9 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows10.0.19041": [
-      "LINK.Client >= 1.0.0",
-      "LINK.Core >= 1.0.0",
-      "LINK.Transport.Serial >= 1.0.0",
+      "LINK.Client >= 2.0.1",
+      "LINK.Core >= 2.0.1",
+      "LINK.Transport.Serial >= 2.0.1",
       "Microsoft.Windows.SDK.BuildTools >= 10.0.26100.7705",
       "Microsoft.WindowsAppSDK >= 1.8.260209005"
     ]
@@ -5648,15 +5744,15 @@
         "dependencies": {
           "LINK.Client": {
             "target": "Package",
-            "version": "[1.0.0, )"
+            "version": "[2.0.1, )"
           },
           "LINK.Core": {
             "target": "Package",
-            "version": "[1.0.0, )"
+            "version": "[2.0.1, )"
           },
           "LINK.Transport.Serial": {
             "target": "Package",
-            "version": "[1.0.0, )"
+            "version": "[2.0.1, )"
           },
           "Microsoft.Windows.SDK.BuildTools": {
             "target": "Package",

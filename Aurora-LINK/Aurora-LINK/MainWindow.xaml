@@ -113,12 +113,22 @@
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
-                    <TextBlock x:Name="ConnectionStatus"
-                               Grid.Column="0"
-                               Text="Non connecté"
-                               FontSize="12"
-                               Foreground="{ThemeResource TextFillColorSecondaryBrush}"
-                               VerticalAlignment="Center" />
+                    <StackPanel Grid.Column="0"
+                                Orientation="Horizontal"
+                                Spacing="8"
+                                VerticalAlignment="Center">
+                        <TextBlock x:Name="ConnectionStatus"
+                                   Text="Non connecté"
+                                   FontSize="12"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                   VerticalAlignment="Center" />
+                        <HyperlinkButton x:Name="BtnReconnect"
+                                         Content="Reconnecter"
+                                         FontSize="12"
+                                         Padding="4,2"
+                                         Visibility="Collapsed"
+                                         Click="BtnReconnect_Click" />
+                    </StackPanel>
                     <TextBlock x:Name="ProjectStatus"
                                Grid.Column="1"
                                Text="Nouveau projet"

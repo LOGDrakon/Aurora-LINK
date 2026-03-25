@@ -53,15 +53,15 @@
           "dependencies": {
             "LINK.Client": {
               "target": "Package",
-              "version": "[1.0.0, )"
+              "version": "[2.0.1, )"
             },
             "LINK.Core": {
               "target": "Package",
-              "version": "[1.0.0, )"
+              "version": "[2.0.1, )"
             },
             "LINK.Transport.Serial": {
               "target": "Package",
-              "version": "[1.0.0, )"
+              "version": "[2.0.1, )"
             },
             "Microsoft.Windows.SDK.BuildTools": {
               "target": "Package",

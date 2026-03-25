@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Aurora-LINK")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("LOGDrakon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Aurora-LINK — Logiciel de configuration Aurora")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1105226daa89a33a9a7b524900179b23cc7eed38")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8b39c53cb7d731464bb45d51dce2535472c9000")]
 [assembly: System.Reflection.AssemblyProductAttribute("Aurora-LINK")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Aurora-LINK")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
