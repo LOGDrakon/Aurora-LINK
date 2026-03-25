@@ -221,12 +221,12 @@ public sealed class AuroraProjectService
         {
             var data = await File.ReadAllBytesAsync(path);
 
-            if (data.Length != AuroraConfiguration.FlashPageSize)
-                return $"Taille du fichier invalide ({data.Length} bytes), attendu {AuroraConfiguration.FlashPageSize} bytes.";
+            if (data.Length > AuroraConfiguration.FlashPageSize)
+                return $"Taille du fichier trop grande ({data.Length} bytes), maximum {AuroraConfiguration.FlashPageSize} bytes.";
 
             var config = AuroraConfigSerializer.Deserialize(data);
             if (config is null)
-                return "Fichier .flora invalide (magic, version ou CRC32 incorrect).";
+                return "Fichier .flora invalide (magic, version, CRC32 ou signature incorrect).";
 
             _project.Config = AuroraProjectMapper.ToProjectConfig(config);
             _project.ModifiedUtc = DateTime.UtcNow;

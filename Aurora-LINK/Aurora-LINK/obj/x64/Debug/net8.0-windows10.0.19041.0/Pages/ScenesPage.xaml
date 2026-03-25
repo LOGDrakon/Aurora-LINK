@@ -32,11 +32,11 @@
                        FontSize="28"
                        FontWeight="SemiBold"
                        VerticalAlignment="Center" />
-            <Button x:ConnectionId='23' Content="Ajouter"
+            <Button x:ConnectionId='19' Content="Ajouter"
                                       
                                                                       
                     VerticalAlignment="Center" />
-            <Button x:ConnectionId='24' Content="Supprimer"
+            <Button x:ConnectionId='20' Content="Supprimer"
                                          
                                                                             
                     VerticalAlignment="Center" />
@@ -51,23 +51,23 @@
                   Margin="0,0,16,0">
             <ListView.ItemTemplate>
                 <DataTemplate                                  >
-                    <Grid x:ConnectionId='19' Padding="8,10" ColumnSpacing="12">
+                    <Grid x:ConnectionId='15' Padding="8,10" ColumnSpacing="12">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock x:ConnectionId='20' Grid.Column="0"
+                        <TextBlock x:ConnectionId='16' Grid.Column="0"
                                                                            
                                    FontWeight="SemiBold"
                                    FontSize="15"
                                    VerticalAlignment="Center" />
-                        <TextBlock x:ConnectionId='21' Grid.Column="1"
+                        <TextBlock x:ConnectionId='17' Grid.Column="1"
                                                                                
                                    Foreground="{ThemeResource TextFillColorSecondaryBrush}"
                                    VerticalAlignment="Center" />
-                        <FontIcon x:ConnectionId='22' Grid.Column="2"
+                        <FontIcon x:ConnectionId='18' Grid.Column="2"
                                   Glyph="&#xE768;"
                                   FontSize="14"
                                   Foreground="{ThemeResource SystemAccentColor}"
@@ -89,9 +89,9 @@
 
                 <!-- En-tête -->
                 <StackPanel Orientation="Horizontal" Spacing="12">
-                    <TextBlock x:ConnectionId='16' FontSize="22" FontWeight="SemiBold"
+                    <TextBlock x:ConnectionId='12' FontSize="22" FontWeight="SemiBold"
                                                                                                 />
-                    <ToggleSwitch x:ConnectionId='17' OnContent="Auto-start" OffContent="Manuel"
+                    <ToggleSwitch x:ConnectionId='13' OnContent="Auto-start" OffContent="Manuel"
                                                                                                 
                                   VerticalAlignment="Center" />
                 </StackPanel>
@@ -108,48 +108,15 @@
                     </ComboBox.ItemTemplate>
                 </ComboBox>
 
-                <!-- Couleur RGB -->
-                <StackPanel x:ConnectionId='5' Spacing="8"
-                                                                                                >
-                    <TextBlock Text="Couleur" FontSize="14" />
-
-                    <!-- Aperçu couleur -->
-                    <Border Height="32" CornerRadius="6"
-                            BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
-                            BorderThickness="1"
-                            HorizontalAlignment="Stretch">
-                        <Border.Background>
-                            <SolidColorBrush x:ConnectionId='14'                                                                    />
-                        </Border.Background>
-                    </Border>
-
-                    <!-- Rouge -->
-                    <StackPanel Spacing="2">
-                        <TextBlock Text="Rouge" FontSize="12"
-                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
-                        <Slider x:ConnectionId='13' Minimum="0" Maximum="255"
-                                                                                         
-                                StepFrequency="1" />
-                    </StackPanel>
-
-                    <!-- Vert -->
-                    <StackPanel Spacing="2">
-                        <TextBlock Text="Vert" FontSize="12"
-                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
-                        <Slider x:ConnectionId='12' Minimum="0" Maximum="255"
-                                                                                           
-                                StepFrequency="1" />
-                    </StackPanel>
-
-                    <!-- Bleu -->
-                    <StackPanel Spacing="2">
-                        <TextBlock Text="Bleu" FontSize="12"
-                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
-                        <Slider x:ConnectionId='11' Minimum="0" Maximum="255"
-                                                                                          
-                                StepFrequency="1" />
-                    </StackPanel>
-                </StackPanel>
+                <!-- Couleur -->
+                <ColorPicker x:ConnectionId='5' IsAlphaEnabled="False"
+                             IsAlphaSliderVisible="False"
+                             IsHexInputVisible="True"
+                             IsColorPreviewVisible="True"
+                             IsMoreButtonVisible="False"
+                             ColorSpectrumShape="Ring"
+                                                                                                
+                                                                                                  />
 
                 <!-- Durée ON / montée / flash -->
                 <NumberBox x:ConnectionId='6'                                                                

@@ -82,22 +82,40 @@ public sealed class SceneViewModel : INotifyPropertyChanged
     public byte Red
     {
         get => _red;
-        set { if (SetField(ref _red, value)) { OnPropertyChanged(nameof(SummaryText)); OnPropertyChanged(nameof(PreviewColor)); } }
+        set { if (SetField(ref _red, value)) { OnPropertyChanged(nameof(SummaryText)); OnPropertyChanged(nameof(PreviewColor)); OnPropertyChanged(nameof(SelectedColor)); } }
     }
 
     public byte Green
     {
         get => _green;
-        set { if (SetField(ref _green, value)) { OnPropertyChanged(nameof(SummaryText)); OnPropertyChanged(nameof(PreviewColor)); } }
+        set { if (SetField(ref _green, value)) { OnPropertyChanged(nameof(SummaryText)); OnPropertyChanged(nameof(PreviewColor)); OnPropertyChanged(nameof(SelectedColor)); } }
     }
 
     public byte Blue
     {
         get => _blue;
-        set { if (SetField(ref _blue, value)) { OnPropertyChanged(nameof(SummaryText)); OnPropertyChanged(nameof(PreviewColor)); } }
+        set { if (SetField(ref _blue, value)) { OnPropertyChanged(nameof(SummaryText)); OnPropertyChanged(nameof(PreviewColor)); OnPropertyChanged(nameof(SelectedColor)); } }
     }
 
     public Windows.UI.Color PreviewColor => Windows.UI.Color.FromArgb(255, _red, _green, _blue);
+
+    public Windows.UI.Color SelectedColor
+    {
+        get => Windows.UI.Color.FromArgb(255, _red, _green, _blue);
+        set
+        {
+            if (_red == value.R && _green == value.G && _blue == value.B) return;
+            _red = value.R;
+            _green = value.G;
+            _blue = value.B;
+            OnPropertyChanged();
+            OnPropertyChanged(nameof(Red));
+            OnPropertyChanged(nameof(Green));
+            OnPropertyChanged(nameof(Blue));
+            OnPropertyChanged(nameof(PreviewColor));
+            OnPropertyChanged(nameof(SummaryText));
+        }
+    }
 
     public ushort TOnMs
     {

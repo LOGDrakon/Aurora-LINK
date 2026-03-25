@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Link.Client;
 using Link.Client.Discovery;
 using Link.Client.Extensions;
+using Link.Core.Transport;
 using Link.Transport.Serial;
 using Microsoft.UI.Dispatching;
 using Microsoft.UI.Xaml;
@@ -23,6 +24,7 @@ public sealed class ConnectionDialog
     private LinkDeviceWatcher? _watcher;
 
     public LinkClient? ConnectedClient { get; private set; }
+    public ILinkTransport? ConnectedTransport { get; private set; }
     public LinkDetectedDevice? SelectedDevice { get; private set; }
     public bool IsAuthenticated { get; private set; }
 
@@ -118,6 +120,7 @@ public sealed class ConnectionDialog
                 await client.ConnectAsync();
 
                 ConnectedClient = client;
+                ConnectedTransport = transport;
                 SelectedDevice = device;
 
                 if (device.DeviceInfo.IsLocked)
@@ -132,6 +135,7 @@ public sealed class ConnectionDialog
             catch (Exception)
             {
                 ConnectedClient = null;
+                ConnectedTransport = null;
                 SelectedDevice = null;
                 throw;
             }

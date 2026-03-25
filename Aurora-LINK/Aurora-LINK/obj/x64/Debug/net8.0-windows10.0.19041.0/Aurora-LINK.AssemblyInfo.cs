@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Aurora-LINK")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f0e101b80c88e924ebc3adf81136a470e00b875")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1105226daa89a33a9a7b524900179b23cc7eed38")]
 [assembly: System.Reflection.AssemblyProductAttribute("Aurora-LINK")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Aurora-LINK")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

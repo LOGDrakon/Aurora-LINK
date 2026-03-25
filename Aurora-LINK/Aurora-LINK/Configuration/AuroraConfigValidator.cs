@@ -109,7 +109,7 @@ public static class AuroraConfigValidator
 
             // Si l'action est LoadScene, vérifier que la cible existe
             if (input.Action == AuroraAction.LoadScene && input.Target >= config.Scenes.Count)
-                result.Warnings.Add($"Entrée E{input.InputId} : cible scène {input.Target} inexistante ({config.Scenes.Count} scène(s) définies).");
+                result.Warnings.Add($"Entrée I{input.InputId} : cible scène {input.Target} inexistante ({config.Scenes.Count} scène(s) définies).");
         }
 
         if (config.Inputs.Count == 0)
@@ -126,14 +126,14 @@ public static class AuroraConfigValidator
         int systemBloc = tlvHeader + 8;
 
         int totalTlv = ledBloc + scenesBloc + inputsBloc + systemBloc;
-        int totalPage = AuroraHeader.Size + totalTlv + AuroraConfiguration.CrcSize;
+        int totalFile = AuroraHeader.Size + totalTlv
+                      + AuroraConfiguration.CrcSize + AuroraHeader.SignatureSize;
 
-        if (totalPage > AuroraConfiguration.FlashPageSize)
-            result.Errors.Add($"Taille totale ({totalPage} bytes) dépasse la page Flash ({AuroraConfiguration.FlashPageSize} bytes).");
+        if (totalFile > AuroraConfiguration.FlashPageSize)
+            result.Errors.Add($"Taille totale ({totalFile} bytes) dépasse la limite ({AuroraConfiguration.FlashPageSize} bytes).");
 
-        int margin = AuroraConfiguration.FlashPageSize - totalPage;
-        int percent = (int)(100.0 * totalPage / AuroraConfiguration.FlashPageSize);
+        int percent = (int)(100.0 * totalFile / AuroraConfiguration.FlashPageSize);
         if (percent > 90)
-            result.Warnings.Add($"Utilisation mémoire élevée : {totalPage}/{AuroraConfiguration.FlashPageSize} bytes ({percent}%), marge : {margin} bytes.");
+            result.Warnings.Add($"Utilisation mémoire élevée : {totalFile}/{AuroraConfiguration.FlashPageSize} bytes ({percent}%).");
     }
 }

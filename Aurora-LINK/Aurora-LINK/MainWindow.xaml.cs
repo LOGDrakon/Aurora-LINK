@@ -1,8 +1,10 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Aurora_LINK.Configuration;
 using Aurora_LINK.Pages;
+using Link.Core.Transport;
 using Link.Client;
 using Link.Client.Discovery;
 using Microsoft.UI.Xaml;
@@ -14,6 +16,7 @@ namespace Aurora_LINK
     public sealed partial class MainWindow : Window
     {
         public LinkClient? Client { get; private set; }
+        public ILinkTransport? Transport { get; private set; }
         public LinkDetectedDevice? ConnectedDevice { get; private set; }
 
         private readonly AuroraProjectService _projectService = AuroraProjectService.Instance;
@@ -62,19 +65,15 @@ namespace Aurora_LINK
                 if (result == ContentDialogResult.Primary && dialog.ConnectedClient is not null)
                 {
                     Client = dialog.ConnectedClient;
+                    Transport = dialog.ConnectedTransport;
                     ConnectedDevice = dialog.SelectedDevice;
 
                     string model = ConnectedDevice?.DeviceInfo.Model ?? "Inconnu";
                     string port = ConnectedDevice?.PortName ?? "";
 
-                    if (dialog.IsAuthenticated)
-                    {
-                        ConnectionStatus.Text = $"Connecté à {model} ({port})";
-                    }
-                    else
-                    {
-                        ConnectionStatus.Text = $"Connecté à {model} ({port}) — verrouillé";
-                    }
+                    ConnectionStatus.Text = $"Connecté à {model} ({port})";
+
+                    NavView.SelectedItem = NavView.MenuItems[0];
                 }
                 else
                 {
@@ -221,11 +220,12 @@ namespace Aurora_LINK
             }
             else
             {
+                var fileInfo = new System.IO.FileInfo(file.Path);
                 await ShowMessageAsync("Export réussi",
                     $"Fichier .flora généré avec succès.\n\n" +
                     $"Chemin : {file.Path}\n" +
-                    $"Taille : {AuroraConfiguration.FlashPageSize} bytes (page Flash complète)\n" +
-                    $"CRC32 vérifié ✓");
+                    $"Taille : {fileInfo.Length} bytes\n" +
+                    $"Signature FLOR ✓ — CRC32 vérifié ✓");
             }
         }
 
@@ -270,10 +270,137 @@ namespace Aurora_LINK
 
         private async void BtnUpload_Click(object sender, RoutedEventArgs e)
         {
-            await ShowMessageAsync(
-                "Fonctionnalité non disponible",
-                "Le téléversement vers le module Aurora n’est pas encore implémenté.\n\n" +
-                "Cette fonctionnalité sera disponible dans une prochaine version.");
+            if (Client is null)
+            {
+                await ShowMessageAsync("Erreur", "Aucun appareil connecté.");
+                return;
+            }
+
+            // Valider la configuration
+            var validation = _projectService.ValidateConfiguration();
+            if (!validation.IsValid)
+            {
+                await ShowMessageAsync("Validation échouée", validation.Summary);
+                return;
+            }
+
+            // Avertissements éventuels — demander confirmation
+            if (validation.Warnings.Count > 0)
+            {
+                var confirm = new ContentDialog
+                {
+                    XamlRoot = Content.XamlRoot,
+                    Title = "Avertissements",
+                    Content = validation.Summary + "\n\nTéléverser quand même ?",
+                    PrimaryButtonText = "Téléverser",
+                    CloseButtonText = "Annuler",
+                    DefaultButton = ContentDialogButton.Primary,
+                };
+
+                if (await confirm.ShowAsync() != ContentDialogResult.Primary)
+                    return;
+            }
+
+            // Sérialiser la configuration en binaire .flora
+            var config = _projectService.GetConfiguration();
+            byte[] floraData;
+            try
+            {
+                floraData = AuroraConfigSerializer.Serialize(config);
+            }
+            catch (Exception ex)
+            {
+                await ShowMessageAsync("Erreur de sérialisation", ex.Message);
+                return;
+            }
+
+            // Vérification de relecture avant envoi
+            if (AuroraConfigSerializer.Deserialize(floraData) is null)
+            {
+                await ShowMessageAsync("Erreur",
+                    "Vérification du programme .flora échouée (CRC ou structure invalide).");
+                return;
+            }
+
+            await PerformUploadAsync(floraData);
+        }
+
+        private async Task PerformUploadAsync(byte[] floraData)
+        {
+            using var cts = new CancellationTokenSource();
+
+            var progressBar = new ProgressBar
+            {
+                Minimum = 0,
+                Maximum = floraData.Length,
+                Value = 0,
+            };
+
+            var statusText = new TextBlock
+            {
+                Text = "Préparation du téléversement…",
+            };
+
+            var panel = new StackPanel
+            {
+                Spacing = 12,
+                MinWidth = 340,
+                Children = { statusText, progressBar },
+            };
+
+            var progressDialog = new ContentDialog
+            {
+                XamlRoot = Content.XamlRoot,
+                Title = "Téléversement",
+                Content = panel,
+                CloseButtonText = "Annuler",
+            };
+
+            progressDialog.CloseButtonClick += (_, _) => cts.Cancel();
+
+            var progress = new Progress<(int Sent, int Total)>(p =>
+            {
+                progressBar.Value = p.Sent;
+                statusText.Text = $"Envoi… {p.Sent} / {p.Total} bytes";
+            });
+
+            string? errorMessage = null;
+            bool cancelled = false;
+
+            var dialogTask = progressDialog.ShowAsync();
+
+            try
+            {
+                await AuroraUploadService.UploadAsync(Client!, floraData, progress, cts.Token);
+                progressDialog.Hide();
+            }
+            catch (OperationCanceledException)
+            {
+                cancelled = true;
+            }
+            catch (Exception ex)
+            {
+                progressDialog.Hide();
+                errorMessage = ex.Message;
+            }
+
+            try { await dialogTask; } catch { }
+
+            if (cancelled)
+            {
+                await ShowMessageAsync("Annulé", "Le téléversement a été annulé.");
+            }
+            else if (errorMessage is not null)
+            {
+                await ShowMessageAsync("Erreur de téléversement", errorMessage);
+            }
+            else
+            {
+                await ShowMessageAsync("Téléversement réussi",
+                    $"Programme envoyé avec succès.\n\n" +
+                    $"Taille : {floraData.Length} bytes\n" +
+                    $"Intégrité vérifiée par le device ✓");
+            }
         }
     }
 }

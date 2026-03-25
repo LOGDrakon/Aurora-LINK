@@ -226,7 +226,7 @@ namespace Aurora_LINK.Aurora_LINK_XamlTypeInfo
         
         private void InitTypeTables()
         {
-            _typeNameTable = new string[60];
+            _typeNameTable = new string[67];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -263,32 +263,39 @@ namespace Aurora_LINK.Aurora_LINK_XamlTypeInfo
             _typeNameTable[33] = "Aurora_LINK.MainWindow";
             _typeNameTable[34] = "Microsoft.UI.Xaml.Window";
             _typeNameTable[35] = "Link.Client.LinkClient";
-            _typeNameTable[36] = "Link.Client.Discovery.LinkDetectedDevice";
-            _typeNameTable[37] = "Aurora_LINK.Pages.DashboardPage";
-            _typeNameTable[38] = "Microsoft.UI.Xaml.Controls.Page";
-            _typeNameTable[39] = "Microsoft.UI.Xaml.Controls.UserControl";
-            _typeNameTable[40] = "Aurora_LINK.Pages.TriggerDisplayConverter";
-            _typeNameTable[41] = "Aurora_LINK.Pages.ActionDisplayConverter";
-            _typeNameTable[42] = "Aurora_LINK.Pages.BoolToOpacityConverter";
-            _typeNameTable[43] = "Microsoft.UI.Xaml.Controls.NumberBox";
-            _typeNameTable[44] = "Microsoft.UI.Xaml.Controls.NumberBoxSpinButtonPlacementMode";
-            _typeNameTable[45] = "Windows.Globalization.NumberFormatting.INumberFormatter2";
-            _typeNameTable[46] = "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase";
-            _typeNameTable[47] = "Microsoft.UI.Xaml.Media.SolidColorBrush";
-            _typeNameTable[48] = "Microsoft.UI.Xaml.TextReadingOrder";
-            _typeNameTable[49] = "Microsoft.UI.Xaml.Controls.NumberBoxValidationMode";
-            _typeNameTable[50] = "Aurora_LINK.Pages.InputsPage";
-            _typeNameTable[51] = "Aurora_LINK.Pages.InputsPageViewModel";
-            _typeNameTable[52] = "Aurora_LINK.Pages.LEDsPage";
-            _typeNameTable[53] = "Aurora_LINK.Pages.LedModeDisplayConverter";
-            _typeNameTable[54] = "Aurora_LINK.Pages.ScenesPage";
-            _typeNameTable[55] = "Aurora_LINK.Pages.ScenesPageViewModel";
-            _typeNameTable[56] = "Aurora_LINK.Pages.SystemPage";
-            _typeNameTable[57] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[58] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[36] = "Link.Core.Transport.ILinkTransport";
+            _typeNameTable[37] = "Link.Client.Discovery.LinkDetectedDevice";
+            _typeNameTable[38] = "Aurora_LINK.Pages.DashboardPage";
+            _typeNameTable[39] = "Microsoft.UI.Xaml.Controls.Page";
+            _typeNameTable[40] = "Microsoft.UI.Xaml.Controls.UserControl";
+            _typeNameTable[41] = "Aurora_LINK.Pages.TriggerDisplayConverter";
+            _typeNameTable[42] = "Aurora_LINK.Pages.ActionDisplayConverter";
+            _typeNameTable[43] = "Aurora_LINK.Pages.BoolToOpacityConverter";
+            _typeNameTable[44] = "Microsoft.UI.Xaml.Controls.NumberBox";
+            _typeNameTable[45] = "Microsoft.UI.Xaml.Controls.NumberBoxSpinButtonPlacementMode";
+            _typeNameTable[46] = "Windows.Globalization.NumberFormatting.INumberFormatter2";
+            _typeNameTable[47] = "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase";
+            _typeNameTable[48] = "Microsoft.UI.Xaml.Media.SolidColorBrush";
+            _typeNameTable[49] = "Microsoft.UI.Xaml.TextReadingOrder";
+            _typeNameTable[50] = "Microsoft.UI.Xaml.Controls.NumberBoxValidationMode";
+            _typeNameTable[51] = "Aurora_LINK.Pages.InputsPage";
+            _typeNameTable[52] = "Aurora_LINK.Pages.InputsPageViewModel";
+            _typeNameTable[53] = "Aurora_LINK.Pages.LEDsPage";
+            _typeNameTable[54] = "Aurora_LINK.Pages.LedModeDisplayConverter";
+            _typeNameTable[55] = "Microsoft.UI.Xaml.Controls.ColorPicker";
+            _typeNameTable[56] = "Microsoft.UI.Xaml.Controls.ColorSpectrumShape";
+            _typeNameTable[57] = "Windows.UI.Color";
+            _typeNameTable[58] = "Microsoft.UI.Xaml.Controls.ColorSpectrumComponents";
             _typeNameTable[59] = "Int32";
+            _typeNameTable[60] = "Microsoft.UI.Xaml.Controls.Orientation";
+            _typeNameTable[61] = "System.Nullable`1<Windows.UI.Color>";
+            _typeNameTable[62] = "Aurora_LINK.Pages.ScenesPage";
+            _typeNameTable[63] = "Aurora_LINK.Pages.ScenesPageViewModel";
+            _typeNameTable[64] = "Aurora_LINK.Pages.SystemPage";
+            _typeNameTable[65] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[66] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
 
-            _typeTable = new global::System.Type[60];
+            _typeTable = new global::System.Type[67];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -325,30 +332,37 @@ namespace Aurora_LINK.Aurora_LINK_XamlTypeInfo
             _typeTable[33] = typeof(global::Aurora_LINK.MainWindow);
             _typeTable[34] = typeof(global::Microsoft.UI.Xaml.Window);
             _typeTable[35] = typeof(global::Link.Client.LinkClient);
-            _typeTable[36] = typeof(global::Link.Client.Discovery.LinkDetectedDevice);
-            _typeTable[37] = typeof(global::Aurora_LINK.Pages.DashboardPage);
-            _typeTable[38] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
-            _typeTable[39] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
-            _typeTable[40] = typeof(global::Aurora_LINK.Pages.TriggerDisplayConverter);
-            _typeTable[41] = typeof(global::Aurora_LINK.Pages.ActionDisplayConverter);
-            _typeTable[42] = typeof(global::Aurora_LINK.Pages.BoolToOpacityConverter);
-            _typeTable[43] = typeof(global::Microsoft.UI.Xaml.Controls.NumberBox);
-            _typeTable[44] = typeof(global::Microsoft.UI.Xaml.Controls.NumberBoxSpinButtonPlacementMode);
-            _typeTable[45] = typeof(global::Windows.Globalization.NumberFormatting.INumberFormatter2);
-            _typeTable[46] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase);
-            _typeTable[47] = typeof(global::Microsoft.UI.Xaml.Media.SolidColorBrush);
-            _typeTable[48] = typeof(global::Microsoft.UI.Xaml.TextReadingOrder);
-            _typeTable[49] = typeof(global::Microsoft.UI.Xaml.Controls.NumberBoxValidationMode);
-            _typeTable[50] = typeof(global::Aurora_LINK.Pages.InputsPage);
-            _typeTable[51] = typeof(global::Aurora_LINK.Pages.InputsPageViewModel);
-            _typeTable[52] = typeof(global::Aurora_LINK.Pages.LEDsPage);
-            _typeTable[53] = typeof(global::Aurora_LINK.Pages.LedModeDisplayConverter);
-            _typeTable[54] = typeof(global::Aurora_LINK.Pages.ScenesPage);
-            _typeTable[55] = typeof(global::Aurora_LINK.Pages.ScenesPageViewModel);
-            _typeTable[56] = typeof(global::Aurora_LINK.Pages.SystemPage);
-            _typeTable[57] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[58] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[36] = typeof(global::Link.Core.Transport.ILinkTransport);
+            _typeTable[37] = typeof(global::Link.Client.Discovery.LinkDetectedDevice);
+            _typeTable[38] = typeof(global::Aurora_LINK.Pages.DashboardPage);
+            _typeTable[39] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
+            _typeTable[40] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
+            _typeTable[41] = typeof(global::Aurora_LINK.Pages.TriggerDisplayConverter);
+            _typeTable[42] = typeof(global::Aurora_LINK.Pages.ActionDisplayConverter);
+            _typeTable[43] = typeof(global::Aurora_LINK.Pages.BoolToOpacityConverter);
+            _typeTable[44] = typeof(global::Microsoft.UI.Xaml.Controls.NumberBox);
+            _typeTable[45] = typeof(global::Microsoft.UI.Xaml.Controls.NumberBoxSpinButtonPlacementMode);
+            _typeTable[46] = typeof(global::Windows.Globalization.NumberFormatting.INumberFormatter2);
+            _typeTable[47] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase);
+            _typeTable[48] = typeof(global::Microsoft.UI.Xaml.Media.SolidColorBrush);
+            _typeTable[49] = typeof(global::Microsoft.UI.Xaml.TextReadingOrder);
+            _typeTable[50] = typeof(global::Microsoft.UI.Xaml.Controls.NumberBoxValidationMode);
+            _typeTable[51] = typeof(global::Aurora_LINK.Pages.InputsPage);
+            _typeTable[52] = typeof(global::Aurora_LINK.Pages.InputsPageViewModel);
+            _typeTable[53] = typeof(global::Aurora_LINK.Pages.LEDsPage);
+            _typeTable[54] = typeof(global::Aurora_LINK.Pages.LedModeDisplayConverter);
+            _typeTable[55] = typeof(global::Microsoft.UI.Xaml.Controls.ColorPicker);
+            _typeTable[56] = typeof(global::Microsoft.UI.Xaml.Controls.ColorSpectrumShape);
+            _typeTable[57] = typeof(global::Windows.UI.Color);
+            _typeTable[58] = typeof(global::Microsoft.UI.Xaml.Controls.ColorSpectrumComponents);
             _typeTable[59] = typeof(global::System.Int32);
+            _typeTable[60] = typeof(global::Microsoft.UI.Xaml.Controls.Orientation);
+            _typeTable[61] = typeof(global::System.Nullable<global::Windows.UI.Color>);
+            _typeTable[62] = typeof(global::Aurora_LINK.Pages.ScenesPage);
+            _typeTable[63] = typeof(global::Aurora_LINK.Pages.ScenesPageViewModel);
+            _typeTable[64] = typeof(global::Aurora_LINK.Pages.SystemPage);
+            _typeTable[65] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[66] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -390,20 +404,21 @@ namespace Aurora_LINK.Aurora_LINK_XamlTypeInfo
         private object Activate_28_NavigationViewItem() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewItem(); }
         private object Activate_31_InfoBadge() { return new global::Microsoft.UI.Xaml.Controls.InfoBadge(); }
         private object Activate_33_MainWindow() { return new global::Aurora_LINK.MainWindow(); }
-        private object Activate_36_LinkDetectedDevice() { return new global::Link.Client.Discovery.LinkDetectedDevice(); }
-        private object Activate_37_DashboardPage() { return new global::Aurora_LINK.Pages.DashboardPage(); }
-        private object Activate_40_TriggerDisplayConverter() { return new global::Aurora_LINK.Pages.TriggerDisplayConverter(); }
-        private object Activate_41_ActionDisplayConverter() { return new global::Aurora_LINK.Pages.ActionDisplayConverter(); }
-        private object Activate_42_BoolToOpacityConverter() { return new global::Aurora_LINK.Pages.BoolToOpacityConverter(); }
-        private object Activate_43_NumberBox() { return new global::Microsoft.UI.Xaml.Controls.NumberBox(); }
-        private object Activate_50_InputsPage() { return new global::Aurora_LINK.Pages.InputsPage(); }
-        private object Activate_51_InputsPageViewModel() { return new global::Aurora_LINK.Pages.InputsPageViewModel(); }
-        private object Activate_52_LEDsPage() { return new global::Aurora_LINK.Pages.LEDsPage(); }
-        private object Activate_53_LedModeDisplayConverter() { return new global::Aurora_LINK.Pages.LedModeDisplayConverter(); }
-        private object Activate_54_ScenesPage() { return new global::Aurora_LINK.Pages.ScenesPage(); }
-        private object Activate_55_ScenesPageViewModel() { return new global::Aurora_LINK.Pages.ScenesPageViewModel(); }
-        private object Activate_56_SystemPage() { return new global::Aurora_LINK.Pages.SystemPage(); }
-        private object Activate_57_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_37_LinkDetectedDevice() { return new global::Link.Client.Discovery.LinkDetectedDevice(); }
+        private object Activate_38_DashboardPage() { return new global::Aurora_LINK.Pages.DashboardPage(); }
+        private object Activate_41_TriggerDisplayConverter() { return new global::Aurora_LINK.Pages.TriggerDisplayConverter(); }
+        private object Activate_42_ActionDisplayConverter() { return new global::Aurora_LINK.Pages.ActionDisplayConverter(); }
+        private object Activate_43_BoolToOpacityConverter() { return new global::Aurora_LINK.Pages.BoolToOpacityConverter(); }
+        private object Activate_44_NumberBox() { return new global::Microsoft.UI.Xaml.Controls.NumberBox(); }
+        private object Activate_51_InputsPage() { return new global::Aurora_LINK.Pages.InputsPage(); }
+        private object Activate_52_InputsPageViewModel() { return new global::Aurora_LINK.Pages.InputsPageViewModel(); }
+        private object Activate_53_LEDsPage() { return new global::Aurora_LINK.Pages.LEDsPage(); }
+        private object Activate_54_LedModeDisplayConverter() { return new global::Aurora_LINK.Pages.LedModeDisplayConverter(); }
+        private object Activate_55_ColorPicker() { return new global::Microsoft.UI.Xaml.Controls.ColorPicker(); }
+        private object Activate_62_ScenesPage() { return new global::Aurora_LINK.Pages.ScenesPage(); }
+        private object Activate_63_ScenesPageViewModel() { return new global::Aurora_LINK.Pages.ScenesPageViewModel(); }
+        private object Activate_64_SystemPage() { return new global::Aurora_LINK.Pages.SystemPage(); }
+        private object Activate_65_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void StaticInitializer_0_XamlControlsResources() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources).TypeHandle);
         private void StaticInitializer_4_MicaBackdrop() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Media.MicaBackdrop).TypeHandle);
         private void StaticInitializer_6_MicaKind() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind).TypeHandle);
@@ -423,24 +438,30 @@ namespace Aurora_LINK.Aurora_LINK_XamlTypeInfo
         private void StaticInitializer_31_InfoBadge() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.InfoBadge).TypeHandle);
         private void StaticInitializer_33_MainWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.MainWindow).TypeHandle);
         private void StaticInitializer_35_LinkClient() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Link.Client.LinkClient).TypeHandle);
-        private void StaticInitializer_36_LinkDetectedDevice() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Link.Client.Discovery.LinkDetectedDevice).TypeHandle);
-        private void StaticInitializer_37_DashboardPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.DashboardPage).TypeHandle);
-        private void StaticInitializer_40_TriggerDisplayConverter() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.TriggerDisplayConverter).TypeHandle);
-        private void StaticInitializer_41_ActionDisplayConverter() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.ActionDisplayConverter).TypeHandle);
-        private void StaticInitializer_42_BoolToOpacityConverter() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.BoolToOpacityConverter).TypeHandle);
-        private void StaticInitializer_43_NumberBox() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.NumberBox).TypeHandle);
-        private void StaticInitializer_44_NumberBoxSpinButtonPlacementMode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.NumberBoxSpinButtonPlacementMode).TypeHandle);
-        private void StaticInitializer_45_INumberFormatter2() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Windows.Globalization.NumberFormatting.INumberFormatter2).TypeHandle);
-        private void StaticInitializer_49_NumberBoxValidationMode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.NumberBoxValidationMode).TypeHandle);
-        private void StaticInitializer_50_InputsPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.InputsPage).TypeHandle);
-        private void StaticInitializer_51_InputsPageViewModel() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.InputsPageViewModel).TypeHandle);
-        private void StaticInitializer_52_LEDsPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.LEDsPage).TypeHandle);
-        private void StaticInitializer_53_LedModeDisplayConverter() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.LedModeDisplayConverter).TypeHandle);
-        private void StaticInitializer_54_ScenesPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.ScenesPage).TypeHandle);
-        private void StaticInitializer_55_ScenesPageViewModel() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.ScenesPageViewModel).TypeHandle);
-        private void StaticInitializer_56_SystemPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.SystemPage).TypeHandle);
-        private void StaticInitializer_57_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
-        private void StaticInitializer_58_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
+        private void StaticInitializer_36_ILinkTransport() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Link.Core.Transport.ILinkTransport).TypeHandle);
+        private void StaticInitializer_37_LinkDetectedDevice() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Link.Client.Discovery.LinkDetectedDevice).TypeHandle);
+        private void StaticInitializer_38_DashboardPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.DashboardPage).TypeHandle);
+        private void StaticInitializer_41_TriggerDisplayConverter() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.TriggerDisplayConverter).TypeHandle);
+        private void StaticInitializer_42_ActionDisplayConverter() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.ActionDisplayConverter).TypeHandle);
+        private void StaticInitializer_43_BoolToOpacityConverter() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.BoolToOpacityConverter).TypeHandle);
+        private void StaticInitializer_44_NumberBox() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.NumberBox).TypeHandle);
+        private void StaticInitializer_45_NumberBoxSpinButtonPlacementMode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.NumberBoxSpinButtonPlacementMode).TypeHandle);
+        private void StaticInitializer_46_INumberFormatter2() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Windows.Globalization.NumberFormatting.INumberFormatter2).TypeHandle);
+        private void StaticInitializer_50_NumberBoxValidationMode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.NumberBoxValidationMode).TypeHandle);
+        private void StaticInitializer_51_InputsPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.InputsPage).TypeHandle);
+        private void StaticInitializer_52_InputsPageViewModel() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.InputsPageViewModel).TypeHandle);
+        private void StaticInitializer_53_LEDsPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.LEDsPage).TypeHandle);
+        private void StaticInitializer_54_LedModeDisplayConverter() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.LedModeDisplayConverter).TypeHandle);
+        private void StaticInitializer_55_ColorPicker() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ColorPicker).TypeHandle);
+        private void StaticInitializer_56_ColorSpectrumShape() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ColorSpectrumShape).TypeHandle);
+        private void StaticInitializer_57_Color() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Windows.UI.Color).TypeHandle);
+        private void StaticInitializer_58_ColorSpectrumComponents() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ColorSpectrumComponents).TypeHandle);
+        private void StaticInitializer_61_Nullable() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Nullable<global::Windows.UI.Color>).TypeHandle);
+        private void StaticInitializer_62_ScenesPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.ScenesPage).TypeHandle);
+        private void StaticInitializer_63_ScenesPageViewModel() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.ScenesPageViewModel).TypeHandle);
+        private void StaticInitializer_64_SystemPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Aurora_LINK.Pages.SystemPage).TypeHandle);
+        private void StaticInitializer_65_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
+        private void StaticInitializer_66_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -454,7 +475,7 @@ namespace Aurora_LINK.Aurora_LINK_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_58_IList(object instance, object item)
+        private void VectorAdd_66_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -720,6 +741,7 @@ namespace Aurora_LINK.Aurora_LINK_XamlTypeInfo
                 userType.Activator = Activate_33_MainWindow;
                 userType.StaticInitializer = StaticInitializer_33_MainWindow;
                 userType.AddMemberName("Client");
+                userType.AddMemberName("Transport");
                 userType.AddMemberName("ConnectedDevice");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -736,57 +758,64 @@ namespace Aurora_LINK.Aurora_LINK_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 36:   //  Link.Client.Discovery.LinkDetectedDevice
-                userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.StaticInitializer = StaticInitializer_36_LinkDetectedDevice;
+            case 36:   //  Link.Core.Transport.ILinkTransport
+                userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.StaticInitializer = StaticInitializer_36_ILinkTransport;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 37:   //  Aurora_LINK.Pages.DashboardPage
+            case 37:   //  Link.Client.Discovery.LinkDetectedDevice
+                userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.StaticInitializer = StaticInitializer_37_LinkDetectedDevice;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 38:   //  Aurora_LINK.Pages.DashboardPage
                 userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_37_DashboardPage;
-                userType.StaticInitializer = StaticInitializer_37_DashboardPage;
+                userType.Activator = Activate_38_DashboardPage;
+                userType.StaticInitializer = StaticInitializer_38_DashboardPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 38:   //  Microsoft.UI.Xaml.Controls.Page
+            case 39:   //  Microsoft.UI.Xaml.Controls.Page
                 xamlType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 39:   //  Microsoft.UI.Xaml.Controls.UserControl
+            case 40:   //  Microsoft.UI.Xaml.Controls.UserControl
                 xamlType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 40:   //  Aurora_LINK.Pages.TriggerDisplayConverter
+            case 41:   //  Aurora_LINK.Pages.TriggerDisplayConverter
                 userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_40_TriggerDisplayConverter;
-                userType.StaticInitializer = StaticInitializer_40_TriggerDisplayConverter;
+                userType.Activator = Activate_41_TriggerDisplayConverter;
+                userType.StaticInitializer = StaticInitializer_41_TriggerDisplayConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 41:   //  Aurora_LINK.Pages.ActionDisplayConverter
+            case 42:   //  Aurora_LINK.Pages.ActionDisplayConverter
                 userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_41_ActionDisplayConverter;
-                userType.StaticInitializer = StaticInitializer_41_ActionDisplayConverter;
+                userType.Activator = Activate_42_ActionDisplayConverter;
+                userType.StaticInitializer = StaticInitializer_42_ActionDisplayConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 42:   //  Aurora_LINK.Pages.BoolToOpacityConverter
+            case 43:   //  Aurora_LINK.Pages.BoolToOpacityConverter
                 userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_42_BoolToOpacityConverter;
-                userType.StaticInitializer = StaticInitializer_42_BoolToOpacityConverter;
+                userType.Activator = Activate_43_BoolToOpacityConverter;
+                userType.StaticInitializer = StaticInitializer_43_BoolToOpacityConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 43:   //  Microsoft.UI.Xaml.Controls.NumberBox
+            case 44:   //  Microsoft.UI.Xaml.Controls.NumberBox
                 userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_43_NumberBox;
-                userType.StaticInitializer = StaticInitializer_43_NumberBox;
+                userType.Activator = Activate_44_NumberBox;
+                userType.StaticInitializer = StaticInitializer_44_NumberBox;
                 userType.AddMemberName("Header");
                 userType.AddMemberName("Minimum");
                 userType.AddMemberName("Maximum");
@@ -809,104 +838,174 @@ namespace Aurora_LINK.Aurora_LINK_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 44:   //  Microsoft.UI.Xaml.Controls.NumberBoxSpinButtonPlacementMode
+            case 45:   //  Microsoft.UI.Xaml.Controls.NumberBoxSpinButtonPlacementMode
                 userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.StaticInitializer = StaticInitializer_44_NumberBoxSpinButtonPlacementMode;
+                userType.StaticInitializer = StaticInitializer_45_NumberBoxSpinButtonPlacementMode;
                 userType.AddEnumValue("Hidden", global::Microsoft.UI.Xaml.Controls.NumberBoxSpinButtonPlacementMode.Hidden);
                 userType.AddEnumValue("Compact", global::Microsoft.UI.Xaml.Controls.NumberBoxSpinButtonPlacementMode.Compact);
                 userType.AddEnumValue("Inline", global::Microsoft.UI.Xaml.Controls.NumberBoxSpinButtonPlacementMode.Inline);
                 xamlType = userType;
                 break;
 
-            case 45:   //  Windows.Globalization.NumberFormatting.INumberFormatter2
+            case 46:   //  Windows.Globalization.NumberFormatting.INumberFormatter2
                 userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.StaticInitializer = StaticInitializer_45_INumberFormatter2;
+                userType.StaticInitializer = StaticInitializer_46_INumberFormatter2;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 46:   //  Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase
+            case 47:   //  Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase
                 xamlType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 47:   //  Microsoft.UI.Xaml.Media.SolidColorBrush
+            case 48:   //  Microsoft.UI.Xaml.Media.SolidColorBrush
                 xamlType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 48:   //  Microsoft.UI.Xaml.TextReadingOrder
+            case 49:   //  Microsoft.UI.Xaml.TextReadingOrder
                 xamlType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 49:   //  Microsoft.UI.Xaml.Controls.NumberBoxValidationMode
+            case 50:   //  Microsoft.UI.Xaml.Controls.NumberBoxValidationMode
                 userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.StaticInitializer = StaticInitializer_49_NumberBoxValidationMode;
+                userType.StaticInitializer = StaticInitializer_50_NumberBoxValidationMode;
                 userType.AddEnumValue("InvalidInputOverwritten", global::Microsoft.UI.Xaml.Controls.NumberBoxValidationMode.InvalidInputOverwritten);
                 userType.AddEnumValue("Disabled", global::Microsoft.UI.Xaml.Controls.NumberBoxValidationMode.Disabled);
                 xamlType = userType;
                 break;
 
-            case 50:   //  Aurora_LINK.Pages.InputsPage
+            case 51:   //  Aurora_LINK.Pages.InputsPage
                 userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_50_InputsPage;
-                userType.StaticInitializer = StaticInitializer_50_InputsPage;
+                userType.Activator = Activate_51_InputsPage;
+                userType.StaticInitializer = StaticInitializer_51_InputsPage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 51:   //  Aurora_LINK.Pages.InputsPageViewModel
+            case 52:   //  Aurora_LINK.Pages.InputsPageViewModel
                 userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.StaticInitializer = StaticInitializer_51_InputsPageViewModel;
+                userType.StaticInitializer = StaticInitializer_52_InputsPageViewModel;
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 52:   //  Aurora_LINK.Pages.LEDsPage
+            case 53:   //  Aurora_LINK.Pages.LEDsPage
                 userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_52_LEDsPage;
-                userType.StaticInitializer = StaticInitializer_52_LEDsPage;
+                userType.Activator = Activate_53_LEDsPage;
+                userType.StaticInitializer = StaticInitializer_53_LEDsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 53:   //  Aurora_LINK.Pages.LedModeDisplayConverter
+            case 54:   //  Aurora_LINK.Pages.LedModeDisplayConverter
                 userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_53_LedModeDisplayConverter;
-                userType.StaticInitializer = StaticInitializer_53_LedModeDisplayConverter;
+                userType.Activator = Activate_54_LedModeDisplayConverter;
+                userType.StaticInitializer = StaticInitializer_54_LedModeDisplayConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 54:   //  Aurora_LINK.Pages.ScenesPage
+            case 55:   //  Microsoft.UI.Xaml.Controls.ColorPicker
+                userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
+                userType.Activator = Activate_55_ColorPicker;
+                userType.StaticInitializer = StaticInitializer_55_ColorPicker;
+                userType.AddMemberName("IsAlphaEnabled");
+                userType.AddMemberName("IsAlphaSliderVisible");
+                userType.AddMemberName("IsHexInputVisible");
+                userType.AddMemberName("IsColorPreviewVisible");
+                userType.AddMemberName("IsMoreButtonVisible");
+                userType.AddMemberName("ColorSpectrumShape");
+                userType.AddMemberName("Color");
+                userType.AddMemberName("ColorSpectrumComponents");
+                userType.AddMemberName("IsAlphaTextInputVisible");
+                userType.AddMemberName("IsColorChannelTextInputVisible");
+                userType.AddMemberName("IsColorSliderVisible");
+                userType.AddMemberName("IsColorSpectrumVisible");
+                userType.AddMemberName("MaxHue");
+                userType.AddMemberName("MaxSaturation");
+                userType.AddMemberName("MaxValue");
+                userType.AddMemberName("MinHue");
+                userType.AddMemberName("MinSaturation");
+                userType.AddMemberName("MinValue");
+                userType.AddMemberName("Orientation");
+                userType.AddMemberName("PreviousColor");
+                xamlType = userType;
+                break;
+
+            case 56:   //  Microsoft.UI.Xaml.Controls.ColorSpectrumShape
+                userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.StaticInitializer = StaticInitializer_56_ColorSpectrumShape;
+                userType.AddEnumValue("Box", global::Microsoft.UI.Xaml.Controls.ColorSpectrumShape.Box);
+                userType.AddEnumValue("Ring", global::Microsoft.UI.Xaml.Controls.ColorSpectrumShape.Ring);
+                xamlType = userType;
+                break;
+
+            case 57:   //  Windows.UI.Color
+                userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.StaticInitializer = StaticInitializer_57_Color;
+                xamlType = userType;
+                break;
+
+            case 58:   //  Microsoft.UI.Xaml.Controls.ColorSpectrumComponents
+                userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.StaticInitializer = StaticInitializer_58_ColorSpectrumComponents;
+                userType.AddEnumValue("HueValue", global::Microsoft.UI.Xaml.Controls.ColorSpectrumComponents.HueValue);
+                userType.AddEnumValue("ValueHue", global::Microsoft.UI.Xaml.Controls.ColorSpectrumComponents.ValueHue);
+                userType.AddEnumValue("HueSaturation", global::Microsoft.UI.Xaml.Controls.ColorSpectrumComponents.HueSaturation);
+                userType.AddEnumValue("SaturationHue", global::Microsoft.UI.Xaml.Controls.ColorSpectrumComponents.SaturationHue);
+                userType.AddEnumValue("SaturationValue", global::Microsoft.UI.Xaml.Controls.ColorSpectrumComponents.SaturationValue);
+                userType.AddEnumValue("ValueSaturation", global::Microsoft.UI.Xaml.Controls.ColorSpectrumComponents.ValueSaturation);
+                xamlType = userType;
+                break;
+
+            case 59:   //  Int32
+                xamlType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 60:   //  Microsoft.UI.Xaml.Controls.Orientation
+                xamlType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 61:   //  System.Nullable`1<Windows.UI.Color>
+                userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetBoxedType(GetXamlTypeByName("Windows.UI.Color"));
+                userType.BoxInstance = userType.BoxType<global::Windows.UI.Color>;
+                userType.StaticInitializer = StaticInitializer_61_Nullable;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 62:   //  Aurora_LINK.Pages.ScenesPage
                 userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_54_ScenesPage;
-                userType.StaticInitializer = StaticInitializer_54_ScenesPage;
+                userType.Activator = Activate_62_ScenesPage;
+                userType.StaticInitializer = StaticInitializer_62_ScenesPage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 55:   //  Aurora_LINK.Pages.ScenesPageViewModel
+            case 63:   //  Aurora_LINK.Pages.ScenesPageViewModel
                 userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.StaticInitializer = StaticInitializer_55_ScenesPageViewModel;
+                userType.StaticInitializer = StaticInitializer_63_ScenesPageViewModel;
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 56:   //  Aurora_LINK.Pages.SystemPage
+            case 64:   //  Aurora_LINK.Pages.SystemPage
                 userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_56_SystemPage;
-                userType.StaticInitializer = StaticInitializer_56_SystemPage;
+                userType.Activator = Activate_64_SystemPage;
+                userType.StaticInitializer = StaticInitializer_64_SystemPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 57:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 65:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_57_TreeViewNode;
-                userType.StaticInitializer = StaticInitializer_57_TreeViewNode;
+                userType.Activator = Activate_65_TreeViewNode;
+                userType.StaticInitializer = StaticInitializer_65_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -918,16 +1017,12 @@ namespace Aurora_LINK.Aurora_LINK_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 58:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 66:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.StaticInitializer = StaticInitializer_58_IList;
-                userType.CollectionAdd = VectorAdd_58_IList;
+                userType.StaticInitializer = StaticInitializer_66_IList;
+                userType.CollectionAdd = VectorAdd_66_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
-                break;
-
-            case 59:   //  Int32
-                xamlType = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
             return xamlType;
@@ -1448,257 +1543,462 @@ namespace Aurora_LINK.Aurora_LINK_XamlTypeInfo
             var that = (global::Aurora_LINK.MainWindow)instance;
             return that.Client;
         }
-        private object get_50_MainWindow_ConnectedDevice(object instance)
+        private object get_50_MainWindow_Transport(object instance)
+        {
+            var that = (global::Aurora_LINK.MainWindow)instance;
+            return that.Transport;
+        }
+        private object get_51_MainWindow_ConnectedDevice(object instance)
         {
             var that = (global::Aurora_LINK.MainWindow)instance;
             return that.ConnectedDevice;
         }
-        private object get_51_NumberBox_Header(object instance)
+        private object get_52_NumberBox_Header(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.Header;
         }
-        private void set_51_NumberBox_Header(object instance, object Value)
+        private void set_52_NumberBox_Header(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.Header = (global::System.Object)Value;
         }
-        private object get_52_NumberBox_Minimum(object instance)
+        private object get_53_NumberBox_Minimum(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.Minimum;
         }
-        private void set_52_NumberBox_Minimum(object instance, object Value)
+        private void set_53_NumberBox_Minimum(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.Minimum = (global::System.Double)Value;
         }
-        private object get_53_NumberBox_Maximum(object instance)
+        private object get_54_NumberBox_Maximum(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.Maximum;
         }
-        private void set_53_NumberBox_Maximum(object instance, object Value)
+        private void set_54_NumberBox_Maximum(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.Maximum = (global::System.Double)Value;
         }
-        private object get_54_NumberBox_SpinButtonPlacementMode(object instance)
+        private object get_55_NumberBox_SpinButtonPlacementMode(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.SpinButtonPlacementMode;
         }
-        private void set_54_NumberBox_SpinButtonPlacementMode(object instance, object Value)
+        private void set_55_NumberBox_SpinButtonPlacementMode(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.SpinButtonPlacementMode = (global::Microsoft.UI.Xaml.Controls.NumberBoxSpinButtonPlacementMode)Value;
         }
-        private object get_55_NumberBox_SmallChange(object instance)
+        private object get_56_NumberBox_SmallChange(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.SmallChange;
         }
-        private void set_55_NumberBox_SmallChange(object instance, object Value)
+        private void set_56_NumberBox_SmallChange(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.SmallChange = (global::System.Double)Value;
         }
-        private object get_56_NumberBox_Value(object instance)
+        private object get_57_NumberBox_Value(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.Value;
         }
-        private void set_56_NumberBox_Value(object instance, object Value)
+        private void set_57_NumberBox_Value(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.Value = (global::System.Double)Value;
         }
-        private object get_57_NumberBox_AcceptsExpression(object instance)
+        private object get_58_NumberBox_AcceptsExpression(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.AcceptsExpression;
         }
-        private void set_57_NumberBox_AcceptsExpression(object instance, object Value)
+        private void set_58_NumberBox_AcceptsExpression(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.AcceptsExpression = (global::System.Boolean)Value;
         }
-        private object get_58_NumberBox_Description(object instance)
+        private object get_59_NumberBox_Description(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.Description;
         }
-        private void set_58_NumberBox_Description(object instance, object Value)
+        private void set_59_NumberBox_Description(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.Description = (global::System.Object)Value;
         }
-        private object get_59_NumberBox_HeaderTemplate(object instance)
+        private object get_60_NumberBox_HeaderTemplate(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.HeaderTemplate;
         }
-        private void set_59_NumberBox_HeaderTemplate(object instance, object Value)
+        private void set_60_NumberBox_HeaderTemplate(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
         }
-        private object get_60_NumberBox_IsWrapEnabled(object instance)
+        private object get_61_NumberBox_IsWrapEnabled(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.IsWrapEnabled;
         }
-        private void set_60_NumberBox_IsWrapEnabled(object instance, object Value)
+        private void set_61_NumberBox_IsWrapEnabled(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.IsWrapEnabled = (global::System.Boolean)Value;
         }
-        private object get_61_NumberBox_LargeChange(object instance)
+        private object get_62_NumberBox_LargeChange(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.LargeChange;
         }
-        private void set_61_NumberBox_LargeChange(object instance, object Value)
+        private void set_62_NumberBox_LargeChange(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.LargeChange = (global::System.Double)Value;
         }
-        private object get_62_NumberBox_NumberFormatter(object instance)
+        private object get_63_NumberBox_NumberFormatter(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.NumberFormatter;
         }
-        private void set_62_NumberBox_NumberFormatter(object instance, object Value)
+        private void set_63_NumberBox_NumberFormatter(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.NumberFormatter = (global::Windows.Globalization.NumberFormatting.INumberFormatter2)Value;
         }
-        private object get_63_NumberBox_PlaceholderText(object instance)
+        private object get_64_NumberBox_PlaceholderText(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.PlaceholderText;
         }
-        private void set_63_NumberBox_PlaceholderText(object instance, object Value)
+        private void set_64_NumberBox_PlaceholderText(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.PlaceholderText = (global::System.String)Value;
         }
-        private object get_64_NumberBox_PreventKeyboardDisplayOnProgrammaticFocus(object instance)
+        private object get_65_NumberBox_PreventKeyboardDisplayOnProgrammaticFocus(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.PreventKeyboardDisplayOnProgrammaticFocus;
         }
-        private void set_64_NumberBox_PreventKeyboardDisplayOnProgrammaticFocus(object instance, object Value)
+        private void set_65_NumberBox_PreventKeyboardDisplayOnProgrammaticFocus(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.PreventKeyboardDisplayOnProgrammaticFocus = (global::System.Boolean)Value;
         }
-        private object get_65_NumberBox_SelectionFlyout(object instance)
+        private object get_66_NumberBox_SelectionFlyout(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.SelectionFlyout;
         }
-        private void set_65_NumberBox_SelectionFlyout(object instance, object Value)
+        private void set_66_NumberBox_SelectionFlyout(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.SelectionFlyout = (global::Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)Value;
         }
-        private object get_66_NumberBox_SelectionHighlightColor(object instance)
+        private object get_67_NumberBox_SelectionHighlightColor(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.SelectionHighlightColor;
         }
-        private void set_66_NumberBox_SelectionHighlightColor(object instance, object Value)
+        private void set_67_NumberBox_SelectionHighlightColor(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.SelectionHighlightColor = (global::Microsoft.UI.Xaml.Media.SolidColorBrush)Value;
         }
-        private object get_67_NumberBox_Text(object instance)
+        private object get_68_NumberBox_Text(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.Text;
         }
-        private void set_67_NumberBox_Text(object instance, object Value)
+        private void set_68_NumberBox_Text(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.Text = (global::System.String)Value;
         }
-        private object get_68_NumberBox_TextReadingOrder(object instance)
+        private object get_69_NumberBox_TextReadingOrder(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.TextReadingOrder;
         }
-        private void set_68_NumberBox_TextReadingOrder(object instance, object Value)
+        private void set_69_NumberBox_TextReadingOrder(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.TextReadingOrder = (global::Microsoft.UI.Xaml.TextReadingOrder)Value;
         }
-        private object get_69_NumberBox_ValidationMode(object instance)
+        private object get_70_NumberBox_ValidationMode(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             return that.ValidationMode;
         }
-        private void set_69_NumberBox_ValidationMode(object instance, object Value)
+        private void set_70_NumberBox_ValidationMode(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NumberBox)instance;
             that.ValidationMode = (global::Microsoft.UI.Xaml.Controls.NumberBoxValidationMode)Value;
         }
-        private object get_70_InputsPage_ViewModel(object instance)
+        private object get_71_InputsPage_ViewModel(object instance)
         {
             var that = (global::Aurora_LINK.Pages.InputsPage)instance;
             return that.ViewModel;
         }
-        private object get_71_ScenesPage_ViewModel(object instance)
+        private object get_72_ColorPicker_IsAlphaEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.IsAlphaEnabled;
+        }
+        private void set_72_ColorPicker_IsAlphaEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.IsAlphaEnabled = (global::System.Boolean)Value;
+        }
+        private object get_73_ColorPicker_IsAlphaSliderVisible(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.IsAlphaSliderVisible;
+        }
+        private void set_73_ColorPicker_IsAlphaSliderVisible(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.IsAlphaSliderVisible = (global::System.Boolean)Value;
+        }
+        private object get_74_ColorPicker_IsHexInputVisible(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.IsHexInputVisible;
+        }
+        private void set_74_ColorPicker_IsHexInputVisible(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.IsHexInputVisible = (global::System.Boolean)Value;
+        }
+        private object get_75_ColorPicker_IsColorPreviewVisible(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.IsColorPreviewVisible;
+        }
+        private void set_75_ColorPicker_IsColorPreviewVisible(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.IsColorPreviewVisible = (global::System.Boolean)Value;
+        }
+        private object get_76_ColorPicker_IsMoreButtonVisible(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.IsMoreButtonVisible;
+        }
+        private void set_76_ColorPicker_IsMoreButtonVisible(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.IsMoreButtonVisible = (global::System.Boolean)Value;
+        }
+        private object get_77_ColorPicker_ColorSpectrumShape(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.ColorSpectrumShape;
+        }
+        private void set_77_ColorPicker_ColorSpectrumShape(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.ColorSpectrumShape = (global::Microsoft.UI.Xaml.Controls.ColorSpectrumShape)Value;
+        }
+        private object get_78_ColorPicker_Color(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.Color;
+        }
+        private void set_78_ColorPicker_Color(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.Color = (global::Windows.UI.Color)Value;
+        }
+        private object get_79_ColorPicker_ColorSpectrumComponents(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.ColorSpectrumComponents;
+        }
+        private void set_79_ColorPicker_ColorSpectrumComponents(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.ColorSpectrumComponents = (global::Microsoft.UI.Xaml.Controls.ColorSpectrumComponents)Value;
+        }
+        private object get_80_ColorPicker_IsAlphaTextInputVisible(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.IsAlphaTextInputVisible;
+        }
+        private void set_80_ColorPicker_IsAlphaTextInputVisible(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.IsAlphaTextInputVisible = (global::System.Boolean)Value;
+        }
+        private object get_81_ColorPicker_IsColorChannelTextInputVisible(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.IsColorChannelTextInputVisible;
+        }
+        private void set_81_ColorPicker_IsColorChannelTextInputVisible(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.IsColorChannelTextInputVisible = (global::System.Boolean)Value;
+        }
+        private object get_82_ColorPicker_IsColorSliderVisible(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.IsColorSliderVisible;
+        }
+        private void set_82_ColorPicker_IsColorSliderVisible(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.IsColorSliderVisible = (global::System.Boolean)Value;
+        }
+        private object get_83_ColorPicker_IsColorSpectrumVisible(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.IsColorSpectrumVisible;
+        }
+        private void set_83_ColorPicker_IsColorSpectrumVisible(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.IsColorSpectrumVisible = (global::System.Boolean)Value;
+        }
+        private object get_84_ColorPicker_MaxHue(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.MaxHue;
+        }
+        private void set_84_ColorPicker_MaxHue(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.MaxHue = (global::System.Int32)Value;
+        }
+        private object get_85_ColorPicker_MaxSaturation(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.MaxSaturation;
+        }
+        private void set_85_ColorPicker_MaxSaturation(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.MaxSaturation = (global::System.Int32)Value;
+        }
+        private object get_86_ColorPicker_MaxValue(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.MaxValue;
+        }
+        private void set_86_ColorPicker_MaxValue(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.MaxValue = (global::System.Int32)Value;
+        }
+        private object get_87_ColorPicker_MinHue(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.MinHue;
+        }
+        private void set_87_ColorPicker_MinHue(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.MinHue = (global::System.Int32)Value;
+        }
+        private object get_88_ColorPicker_MinSaturation(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.MinSaturation;
+        }
+        private void set_88_ColorPicker_MinSaturation(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.MinSaturation = (global::System.Int32)Value;
+        }
+        private object get_89_ColorPicker_MinValue(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.MinValue;
+        }
+        private void set_89_ColorPicker_MinValue(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.MinValue = (global::System.Int32)Value;
+        }
+        private object get_90_ColorPicker_Orientation(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.Orientation;
+        }
+        private void set_90_ColorPicker_Orientation(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.Orientation = (global::Microsoft.UI.Xaml.Controls.Orientation)Value;
+        }
+        private object get_91_ColorPicker_PreviousColor(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            return that.PreviousColor;
+        }
+        private void set_91_ColorPicker_PreviousColor(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColorPicker)instance;
+            that.PreviousColor = (global::System.Nullable<global::Windows.UI.Color>)Value;
+        }
+        private object get_92_ScenesPage_ViewModel(object instance)
         {
             var that = (global::Aurora_LINK.Pages.ScenesPage)instance;
             return that.ViewModel;
         }
-        private object get_72_TreeViewNode_Children(object instance)
+        private object get_93_TreeViewNode_Children(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Children;
         }
-        private object get_73_TreeViewNode_Content(object instance)
+        private object get_94_TreeViewNode_Content(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Content;
         }
-        private void set_73_TreeViewNode_Content(object instance, object Value)
+        private void set_94_TreeViewNode_Content(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.Content = (global::System.Object)Value;
         }
-        private object get_74_TreeViewNode_Depth(object instance)
+        private object get_95_TreeViewNode_Depth(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Depth;
         }
-        private object get_75_TreeViewNode_HasChildren(object instance)
+        private object get_96_TreeViewNode_HasChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasChildren;
         }
-        private object get_76_TreeViewNode_HasUnrealizedChildren(object instance)
+        private object get_97_TreeViewNode_HasUnrealizedChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasUnrealizedChildren;
         }
-        private void set_76_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
+        private void set_97_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.HasUnrealizedChildren = (global::System.Boolean)Value;
         }
-        private object get_77_TreeViewNode_IsExpanded(object instance)
+        private object get_98_TreeViewNode_IsExpanded(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.IsExpanded;
         }
-        private void set_77_TreeViewNode_IsExpanded(object instance, object Value)
+        private void set_98_TreeViewNode_IsExpanded(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.IsExpanded = (global::System.Boolean)Value;
         }
-        private object get_78_TreeViewNode_Parent(object instance)
+        private object get_99_TreeViewNode_Parent(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Parent;
@@ -2060,201 +2360,347 @@ namespace Aurora_LINK.Aurora_LINK_XamlTypeInfo
                 xamlMember.Getter = get_49_MainWindow_Client;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "Aurora_LINK.MainWindow.Transport":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Aurora_LINK.MainWindow");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "Transport", "Link.Core.Transport.ILinkTransport");
+                xamlMember.Getter = get_50_MainWindow_Transport;
+                xamlMember.SetIsReadOnly();
+                break;
             case "Aurora_LINK.MainWindow.ConnectedDevice":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Aurora_LINK.MainWindow");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "ConnectedDevice", "Link.Client.Discovery.LinkDetectedDevice");
-                xamlMember.Getter = get_50_MainWindow_ConnectedDevice;
+                xamlMember.Getter = get_51_MainWindow_ConnectedDevice;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.Header":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "Header", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_51_NumberBox_Header;
-                xamlMember.Setter = set_51_NumberBox_Header;
+                xamlMember.Getter = get_52_NumberBox_Header;
+                xamlMember.Setter = set_52_NumberBox_Header;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.Minimum":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "Minimum", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_52_NumberBox_Minimum;
-                xamlMember.Setter = set_52_NumberBox_Minimum;
+                xamlMember.Getter = get_53_NumberBox_Minimum;
+                xamlMember.Setter = set_53_NumberBox_Minimum;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.Maximum":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "Maximum", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_53_NumberBox_Maximum;
-                xamlMember.Setter = set_53_NumberBox_Maximum;
+                xamlMember.Getter = get_54_NumberBox_Maximum;
+                xamlMember.Setter = set_54_NumberBox_Maximum;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.SpinButtonPlacementMode":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "SpinButtonPlacementMode", "Microsoft.UI.Xaml.Controls.NumberBoxSpinButtonPlacementMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_54_NumberBox_SpinButtonPlacementMode;
-                xamlMember.Setter = set_54_NumberBox_SpinButtonPlacementMode;
+                xamlMember.Getter = get_55_NumberBox_SpinButtonPlacementMode;
+                xamlMember.Setter = set_55_NumberBox_SpinButtonPlacementMode;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.SmallChange":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "SmallChange", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_55_NumberBox_SmallChange;
-                xamlMember.Setter = set_55_NumberBox_SmallChange;
+                xamlMember.Getter = get_56_NumberBox_SmallChange;
+                xamlMember.Setter = set_56_NumberBox_SmallChange;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.Value":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "Value", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_56_NumberBox_Value;
-                xamlMember.Setter = set_56_NumberBox_Value;
+                xamlMember.Getter = get_57_NumberBox_Value;
+                xamlMember.Setter = set_57_NumberBox_Value;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.AcceptsExpression":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "AcceptsExpression", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_57_NumberBox_AcceptsExpression;
-                xamlMember.Setter = set_57_NumberBox_AcceptsExpression;
+                xamlMember.Getter = get_58_NumberBox_AcceptsExpression;
+                xamlMember.Setter = set_58_NumberBox_AcceptsExpression;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.Description":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "Description", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_58_NumberBox_Description;
-                xamlMember.Setter = set_58_NumberBox_Description;
+                xamlMember.Getter = get_59_NumberBox_Description;
+                xamlMember.Setter = set_59_NumberBox_Description;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.HeaderTemplate":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_59_NumberBox_HeaderTemplate;
-                xamlMember.Setter = set_59_NumberBox_HeaderTemplate;
+                xamlMember.Getter = get_60_NumberBox_HeaderTemplate;
+                xamlMember.Setter = set_60_NumberBox_HeaderTemplate;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.IsWrapEnabled":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "IsWrapEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_60_NumberBox_IsWrapEnabled;
-                xamlMember.Setter = set_60_NumberBox_IsWrapEnabled;
+                xamlMember.Getter = get_61_NumberBox_IsWrapEnabled;
+                xamlMember.Setter = set_61_NumberBox_IsWrapEnabled;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.LargeChange":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "LargeChange", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_61_NumberBox_LargeChange;
-                xamlMember.Setter = set_61_NumberBox_LargeChange;
+                xamlMember.Getter = get_62_NumberBox_LargeChange;
+                xamlMember.Setter = set_62_NumberBox_LargeChange;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.NumberFormatter":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "NumberFormatter", "Windows.Globalization.NumberFormatting.INumberFormatter2");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_62_NumberBox_NumberFormatter;
-                xamlMember.Setter = set_62_NumberBox_NumberFormatter;
+                xamlMember.Getter = get_63_NumberBox_NumberFormatter;
+                xamlMember.Setter = set_63_NumberBox_NumberFormatter;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.PlaceholderText":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "PlaceholderText", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_63_NumberBox_PlaceholderText;
-                xamlMember.Setter = set_63_NumberBox_PlaceholderText;
+                xamlMember.Getter = get_64_NumberBox_PlaceholderText;
+                xamlMember.Setter = set_64_NumberBox_PlaceholderText;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.PreventKeyboardDisplayOnProgrammaticFocus":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "PreventKeyboardDisplayOnProgrammaticFocus", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_64_NumberBox_PreventKeyboardDisplayOnProgrammaticFocus;
-                xamlMember.Setter = set_64_NumberBox_PreventKeyboardDisplayOnProgrammaticFocus;
+                xamlMember.Getter = get_65_NumberBox_PreventKeyboardDisplayOnProgrammaticFocus;
+                xamlMember.Setter = set_65_NumberBox_PreventKeyboardDisplayOnProgrammaticFocus;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.SelectionFlyout":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "SelectionFlyout", "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_65_NumberBox_SelectionFlyout;
-                xamlMember.Setter = set_65_NumberBox_SelectionFlyout;
+                xamlMember.Getter = get_66_NumberBox_SelectionFlyout;
+                xamlMember.Setter = set_66_NumberBox_SelectionFlyout;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.SelectionHighlightColor":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "SelectionHighlightColor", "Microsoft.UI.Xaml.Media.SolidColorBrush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_66_NumberBox_SelectionHighlightColor;
-                xamlMember.Setter = set_66_NumberBox_SelectionHighlightColor;
+                xamlMember.Getter = get_67_NumberBox_SelectionHighlightColor;
+                xamlMember.Setter = set_67_NumberBox_SelectionHighlightColor;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.Text":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "Text", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_67_NumberBox_Text;
-                xamlMember.Setter = set_67_NumberBox_Text;
+                xamlMember.Getter = get_68_NumberBox_Text;
+                xamlMember.Setter = set_68_NumberBox_Text;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.TextReadingOrder":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "TextReadingOrder", "Microsoft.UI.Xaml.TextReadingOrder");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_68_NumberBox_TextReadingOrder;
-                xamlMember.Setter = set_68_NumberBox_TextReadingOrder;
+                xamlMember.Getter = get_69_NumberBox_TextReadingOrder;
+                xamlMember.Setter = set_69_NumberBox_TextReadingOrder;
                 break;
             case "Microsoft.UI.Xaml.Controls.NumberBox.ValidationMode":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NumberBox");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "ValidationMode", "Microsoft.UI.Xaml.Controls.NumberBoxValidationMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_69_NumberBox_ValidationMode;
-                xamlMember.Setter = set_69_NumberBox_ValidationMode;
+                xamlMember.Getter = get_70_NumberBox_ValidationMode;
+                xamlMember.Setter = set_70_NumberBox_ValidationMode;
                 break;
             case "Aurora_LINK.Pages.InputsPage.ViewModel":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Aurora_LINK.Pages.InputsPage");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "ViewModel", "Aurora_LINK.Pages.InputsPageViewModel");
-                xamlMember.Getter = get_70_InputsPage_ViewModel;
+                xamlMember.Getter = get_71_InputsPage_ViewModel;
                 xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.IsAlphaEnabled":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "IsAlphaEnabled", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_72_ColorPicker_IsAlphaEnabled;
+                xamlMember.Setter = set_72_ColorPicker_IsAlphaEnabled;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.IsAlphaSliderVisible":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "IsAlphaSliderVisible", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_73_ColorPicker_IsAlphaSliderVisible;
+                xamlMember.Setter = set_73_ColorPicker_IsAlphaSliderVisible;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.IsHexInputVisible":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "IsHexInputVisible", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_74_ColorPicker_IsHexInputVisible;
+                xamlMember.Setter = set_74_ColorPicker_IsHexInputVisible;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.IsColorPreviewVisible":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "IsColorPreviewVisible", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_75_ColorPicker_IsColorPreviewVisible;
+                xamlMember.Setter = set_75_ColorPicker_IsColorPreviewVisible;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.IsMoreButtonVisible":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "IsMoreButtonVisible", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_76_ColorPicker_IsMoreButtonVisible;
+                xamlMember.Setter = set_76_ColorPicker_IsMoreButtonVisible;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.ColorSpectrumShape":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "ColorSpectrumShape", "Microsoft.UI.Xaml.Controls.ColorSpectrumShape");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_77_ColorPicker_ColorSpectrumShape;
+                xamlMember.Setter = set_77_ColorPicker_ColorSpectrumShape;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.Color":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "Color", "Windows.UI.Color");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_78_ColorPicker_Color;
+                xamlMember.Setter = set_78_ColorPicker_Color;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.ColorSpectrumComponents":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "ColorSpectrumComponents", "Microsoft.UI.Xaml.Controls.ColorSpectrumComponents");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_79_ColorPicker_ColorSpectrumComponents;
+                xamlMember.Setter = set_79_ColorPicker_ColorSpectrumComponents;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.IsAlphaTextInputVisible":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "IsAlphaTextInputVisible", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_80_ColorPicker_IsAlphaTextInputVisible;
+                xamlMember.Setter = set_80_ColorPicker_IsAlphaTextInputVisible;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.IsColorChannelTextInputVisible":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "IsColorChannelTextInputVisible", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_81_ColorPicker_IsColorChannelTextInputVisible;
+                xamlMember.Setter = set_81_ColorPicker_IsColorChannelTextInputVisible;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.IsColorSliderVisible":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "IsColorSliderVisible", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_82_ColorPicker_IsColorSliderVisible;
+                xamlMember.Setter = set_82_ColorPicker_IsColorSliderVisible;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.IsColorSpectrumVisible":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "IsColorSpectrumVisible", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_83_ColorPicker_IsColorSpectrumVisible;
+                xamlMember.Setter = set_83_ColorPicker_IsColorSpectrumVisible;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.MaxHue":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "MaxHue", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_84_ColorPicker_MaxHue;
+                xamlMember.Setter = set_84_ColorPicker_MaxHue;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.MaxSaturation":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "MaxSaturation", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_85_ColorPicker_MaxSaturation;
+                xamlMember.Setter = set_85_ColorPicker_MaxSaturation;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.MaxValue":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "MaxValue", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_86_ColorPicker_MaxValue;
+                xamlMember.Setter = set_86_ColorPicker_MaxValue;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.MinHue":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "MinHue", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_87_ColorPicker_MinHue;
+                xamlMember.Setter = set_87_ColorPicker_MinHue;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.MinSaturation":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "MinSaturation", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_88_ColorPicker_MinSaturation;
+                xamlMember.Setter = set_88_ColorPicker_MinSaturation;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.MinValue":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "MinValue", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_89_ColorPicker_MinValue;
+                xamlMember.Setter = set_89_ColorPicker_MinValue;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.Orientation":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "Orientation", "Microsoft.UI.Xaml.Controls.Orientation");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_90_ColorPicker_Orientation;
+                xamlMember.Setter = set_90_ColorPicker_Orientation;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColorPicker.PreviousColor":
+                userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColorPicker");
+                xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "PreviousColor", "System.Nullable`1<Windows.UI.Color>");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_91_ColorPicker_PreviousColor;
+                xamlMember.Setter = set_91_ColorPicker_PreviousColor;
                 break;
             case "Aurora_LINK.Pages.ScenesPage.ViewModel":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Aurora_LINK.Pages.ScenesPage");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "ViewModel", "Aurora_LINK.Pages.ScenesPageViewModel");
-                xamlMember.Getter = get_71_ScenesPage_ViewModel;
+                xamlMember.Getter = get_92_ScenesPage_ViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Children":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "Children", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>");
-                xamlMember.Getter = get_72_TreeViewNode_Children;
+                xamlMember.Getter = get_93_TreeViewNode_Children;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Content":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "Content", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_73_TreeViewNode_Content;
-                xamlMember.Setter = set_73_TreeViewNode_Content;
+                xamlMember.Getter = get_94_TreeViewNode_Content;
+                xamlMember.Setter = set_94_TreeViewNode_Content;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Depth":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "Depth", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_74_TreeViewNode_Depth;
+                xamlMember.Getter = get_95_TreeViewNode_Depth;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasChildren":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "HasChildren", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_75_TreeViewNode_HasChildren;
+                xamlMember.Getter = get_96_TreeViewNode_HasChildren;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasUnrealizedChildren":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "HasUnrealizedChildren", "Boolean");
-                xamlMember.Getter = get_76_TreeViewNode_HasUnrealizedChildren;
-                xamlMember.Setter = set_76_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Getter = get_97_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Setter = set_97_TreeViewNode_HasUnrealizedChildren;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.IsExpanded":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_77_TreeViewNode_IsExpanded;
-                xamlMember.Setter = set_77_TreeViewNode_IsExpanded;
+                xamlMember.Getter = get_98_TreeViewNode_IsExpanded;
+                xamlMember.Setter = set_98_TreeViewNode_IsExpanded;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Parent":
                 userType = (global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::Aurora_LINK.Aurora_LINK_XamlTypeInfo.XamlMember(this, "Parent", "Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember.Getter = get_78_TreeViewNode_Parent;
+                xamlMember.Getter = get_99_TreeViewNode_Parent;
                 xamlMember.SetIsReadOnly();
                 break;
             }

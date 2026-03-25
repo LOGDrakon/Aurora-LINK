@@ -20,14 +20,12 @@ public static class AuroraConfigSerializer
     // ──────────────────────────── Serialize ────────────────────────────
 
     /// <summary>
-    /// Sérialise la configuration en une page Flash de 2048 bytes.
+    /// Sérialise la configuration en binaire .flora de taille variable (max 2048 bytes).
+    /// Structure : Header (16B) + TLV + CRC32 (4B) + Signature "FLOR" (4B).
     /// Incrémente automatiquement <see cref="AuroraHeader.WriteCount"/>.
     /// </summary>
     public static byte[] Serialize(AuroraConfiguration config)
     {
-        var page = new byte[AuroraConfiguration.FlashPageSize];
-        Array.Fill(page, (byte)0xFF);
-
         // Construire les blocs TLV dans un buffer temporaire
         byte[] tlvData;
         byte numBlocs = 0;
@@ -55,9 +53,14 @@ public static class AuroraConfigSerializer
         config.Header.TotalLength = (ushort)tlvData.Length;
         config.Header.WriteCount++;
 
-        // Écrire le header (16 bytes)
-        using var ms = new MemoryStream(page);
+        // Taille totale = Header + TLV + CRC32 + Signature
+        int totalSize = AuroraHeader.Size + tlvData.Length
+                      + AuroraConfiguration.CrcSize + AuroraHeader.SignatureSize;
+
+        using var ms = new MemoryStream(totalSize);
         using var w = new BinaryWriter(ms);
+
+        // Header (16 bytes)
         w.Write(config.Header.Magic);
         w.Write(config.Header.Version);
         w.Write(config.Header.NumBlocs);
@@ -65,37 +68,50 @@ public static class AuroraConfigSerializer
         w.Write(config.Header.WriteCount);
         w.Write(config.Header.Reserved);
 
-        // Écrire les blocs TLV
+        // Blocs TLV
         w.Write(tlvData);
 
-        // CRC32 sur header + TLV, placé immédiatement après
+        // CRC32 sur header + TLV
+        var data = ms.ToArray();
         int crcOffset = AuroraHeader.Size + tlvData.Length;
-        uint crc = ComputeCrc32(page, 0, crcOffset);
-        BinaryPrimitives.WriteUInt32LittleEndian(page.AsSpan(crcOffset), crc);
+        uint crc = ComputeCrc32(data, 0, crcOffset);
+        w.Write(crc);
 
-        return page;
+        // Signature de fin "FLOR"
+        w.Write(AuroraHeader.SignatureValue);
+
+        return ms.ToArray();
     }
 
     // ──────────────────────────── Deserialize ──────────────────────────
 
     /// <summary>
-    /// Désérialise une page Flash de 2048 bytes en configuration Aurora.
-    /// Retourne <c>null</c> si le magic, la version ou le CRC sont invalides.
+    /// Désérialise un fichier .flora de taille variable.
+    /// Vérifie le magic, la version, le CRC32 et la signature de fin "FLOR".
+    /// Retourne <c>null</c> si le fichier est invalide.
     /// </summary>
-    public static AuroraConfiguration? Deserialize(ReadOnlySpan<byte> page)
+    public static AuroraConfiguration? Deserialize(ReadOnlySpan<byte> data)
     {
-        if (page.Length != AuroraConfiguration.FlashPageSize)
+        // Taille minimale : Header(16) + CRC32(4) + Signature(4) = 24 bytes
+        int minSize = AuroraHeader.Size + AuroraConfiguration.CrcSize + AuroraHeader.SignatureSize;
+        if (data.Length < minSize || data.Length > AuroraConfiguration.FlashPageSize)
+            return null;
+
+        // Vérifier la signature de fin "FLOR"
+        uint signature = BinaryPrimitives.ReadUInt32LittleEndian(
+            data[(data.Length - AuroraHeader.SignatureSize)..]);
+        if (signature != AuroraHeader.SignatureValue)
             return null;
 
         // Lire le header
         var header = new AuroraHeader
         {
-            Magic = BinaryPrimitives.ReadUInt32LittleEndian(page),
-            Version = page[4],
-            NumBlocs = page[5],
-            TotalLength = BinaryPrimitives.ReadUInt16LittleEndian(page[6..]),
-            WriteCount = BinaryPrimitives.ReadUInt32LittleEndian(page[8..]),
-            Reserved = BinaryPrimitives.ReadUInt32LittleEndian(page[12..]),
+            Magic = BinaryPrimitives.ReadUInt32LittleEndian(data),
+            Version = data[4],
+            NumBlocs = data[5],
+            TotalLength = BinaryPrimitives.ReadUInt16LittleEndian(data[6..]),
+            WriteCount = BinaryPrimitives.ReadUInt32LittleEndian(data[8..]),
+            Reserved = BinaryPrimitives.ReadUInt32LittleEndian(data[12..]),
         };
 
         if (header.Magic != AuroraHeader.MagicValue)
@@ -104,12 +120,16 @@ public static class AuroraConfigSerializer
         if (header.Version > AuroraHeader.CurrentVersion)
             return null;
 
-        int crcOffset = AuroraHeader.Size + header.TotalLength;
-        if (crcOffset + AuroraConfiguration.CrcSize > page.Length)
+        // Vérifier la cohérence de la taille
+        int expectedSize = AuroraHeader.Size + header.TotalLength
+                         + AuroraConfiguration.CrcSize + AuroraHeader.SignatureSize;
+        if (data.Length != expectedSize)
             return null;
 
-        uint computed = ComputeCrc32(page[..crcOffset]);
-        uint stored = BinaryPrimitives.ReadUInt32LittleEndian(page[crcOffset..]);
+        // Vérifier le CRC32 (calculé sur Header + TLV)
+        int crcOffset = AuroraHeader.Size + header.TotalLength;
+        uint computed = ComputeCrc32(data[..crcOffset]);
+        uint stored = BinaryPrimitives.ReadUInt32LittleEndian(data[crcOffset..]);
         if (computed != stored)
             return null;
 
@@ -120,15 +140,15 @@ public static class AuroraConfigSerializer
 
         for (int i = 0; i < header.NumBlocs && pos + TlvHeaderSize <= endPos; i++)
         {
-            byte type = page[pos];
-            // byte flags = page[pos + 1]; // réservé
-            ushort length = BinaryPrimitives.ReadUInt16LittleEndian(page[(pos + 2)..]);
+            byte type = data[pos];
+            // byte flags = data[pos + 1]; // réservé
+            ushort length = BinaryPrimitives.ReadUInt16LittleEndian(data[(pos + 2)..]);
             int dataStart = pos + TlvHeaderSize;
 
             if (dataStart + length > endPos)
                 break;
 
-            var payload = page.Slice(dataStart, length);
+            var payload = data.Slice(dataStart, length);
 
             switch (type)
             {

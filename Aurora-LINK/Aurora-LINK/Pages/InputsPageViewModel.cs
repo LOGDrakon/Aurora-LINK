@@ -20,7 +20,7 @@ public sealed class InputRuleViewModel : INotifyPropertyChanged
     private bool _isEnabled;
 
     public byte InputId { get; }
-    public string DisplayName => $"E{InputId}";
+    public string DisplayName => $"I{InputId}";
 
     public bool IsEnabled
     {
@@ -167,7 +167,7 @@ public sealed class InputRuleViewModel : INotifyPropertyChanged
 }
 
 /// <summary>
-/// ViewModel de la page Entrées — gère les 10 entrées E0–E9.
+/// ViewModel de la page Entrées — gère les 10 entrées I0–I9.
 /// </summary>
 public sealed class InputsPageViewModel : INotifyPropertyChanged
 {

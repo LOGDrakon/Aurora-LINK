@@ -7,11 +7,11 @@
 
     Pour plus d'informations sur les fichiers manifeste, consultez http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="a8b43274-8e15-40f6-9be4-80f30953aa51" Publisher="CN=MAINTENANCE" Version="1.0.0.0" ProcessorArchitecture="x64" />
+  <Identity Name="a8b43274-8e15-40f6-9be4-80f30953aa51" Publisher="CN=LOG Drakon" Version="1.0.0.0" ProcessorArchitecture="x64" />
   <mp:PhoneIdentity PhoneProductId="a8b43274-8e15-40f6-9be4-80f30953aa51" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Aurora-LINK (Package)</DisplayName>
-    <PublisherDisplayName>MAINTENANCE</PublisherDisplayName>
+    <PublisherDisplayName>Kenzo Gallauziaux</PublisherDisplayName>
     <Logo>Images\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
@@ -26,7 +26,7 @@
   <Applications>
     <Application Id="App" Executable="Aurora-LINK\Aurora-LINK.exe" EntryPoint="Windows.FullTrustApplication">
       <uap:VisualElements DisplayName="Aurora-LINK (Package)" Description="Aurora-LINK (Package)" BackgroundColor="transparent" Square150x150Logo="Images\Square150x150Logo.png" Square44x44Logo="Images\Square44x44Logo.png">
-        <uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png" />
+        <uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png" Square71x71Logo="Images\SmallTile.png" Square310x310Logo="Images\LargeTile.png" />
         <uap:SplashScreen Image="Images\SplashScreen.png" />
       </uap:VisualElements>
     </Application>

@@ -108,48 +108,15 @@
                     </ComboBox.ItemTemplate>
                 </ComboBox>
 
-                <!-- Couleur RGB -->
-                <StackPanel Spacing="8"
-                            Visibility="{x:Bind ViewModel.SelectedScene.ShowColor, Mode=OneWay}">
-                    <TextBlock Text="Couleur" FontSize="14" />
-
-                    <!-- Aperçu couleur -->
-                    <Border Height="32" CornerRadius="6"
-                            BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
-                            BorderThickness="1"
-                            HorizontalAlignment="Stretch">
-                        <Border.Background>
-                            <SolidColorBrush Color="{x:Bind ViewModel.SelectedScene.PreviewColor, Mode=OneWay}" />
-                        </Border.Background>
-                    </Border>
-
-                    <!-- Rouge -->
-                    <StackPanel Spacing="2">
-                        <TextBlock Text="Rouge" FontSize="12"
-                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
-                        <Slider Minimum="0" Maximum="255"
-                                Value="{x:Bind ViewModel.SelectedScene.Red, Mode=TwoWay}"
-                                StepFrequency="1" />
-                    </StackPanel>
-
-                    <!-- Vert -->
-                    <StackPanel Spacing="2">
-                        <TextBlock Text="Vert" FontSize="12"
-                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
-                        <Slider Minimum="0" Maximum="255"
-                                Value="{x:Bind ViewModel.SelectedScene.Green, Mode=TwoWay}"
-                                StepFrequency="1" />
-                    </StackPanel>
-
-                    <!-- Bleu -->
-                    <StackPanel Spacing="2">
-                        <TextBlock Text="Bleu" FontSize="12"
-                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
-                        <Slider Minimum="0" Maximum="255"
-                                Value="{x:Bind ViewModel.SelectedScene.Blue, Mode=TwoWay}"
-                                StepFrequency="1" />
-                    </StackPanel>
-                </StackPanel>
+                <!-- Couleur -->
+                <ColorPicker IsAlphaEnabled="False"
+                             IsAlphaSliderVisible="False"
+                             IsHexInputVisible="True"
+                             IsColorPreviewVisible="True"
+                             IsMoreButtonVisible="False"
+                             ColorSpectrumShape="Ring"
+                             Color="{x:Bind ViewModel.SelectedScene.SelectedColor, Mode=TwoWay}"
+                             Visibility="{x:Bind ViewModel.SelectedScene.ShowColor, Mode=OneWay}" />
 
                 <!-- Durée ON / montée / flash -->
                 <NumberBox Header="{x:Bind ViewModel.SelectedScene.TOnLabel, Mode=OneWay}"

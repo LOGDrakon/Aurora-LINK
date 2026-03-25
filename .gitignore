@@ -11,3 +11,6 @@ obj/
 
 ## NuGet
 *.nupkg
+
+## User
+.user/

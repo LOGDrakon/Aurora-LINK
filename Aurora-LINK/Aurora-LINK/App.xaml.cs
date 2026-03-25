@@ -28,22 +28,18 @@ namespace Aurora_LINK
     {
         private Window? _window;
 
-        /// <summary>
-        /// Initializes the singleton application object.  This is the first line of authored code
-        /// executed, and as such is the logical equivalent of main() or WinMain().
-        /// </summary>
+        public static MainWindow? MainWindow { get; private set; }
+
         public App()
         {
             InitializeComponent();
         }
 
-        /// <summary>
-        /// Invoked when the application is launched.
-        /// </summary>
-        /// <param name="args">Details about the launch request and process.</param>
         protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
-            _window = new MainWindow();
+            var window = new MainWindow();
+            MainWindow = window;
+            _window = window;
             _window.Activate();
         }
     }

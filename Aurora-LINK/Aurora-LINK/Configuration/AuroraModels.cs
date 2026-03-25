@@ -6,8 +6,10 @@ namespace Aurora_LINK.Configuration;
 public sealed class AuroraHeader
 {
     public const uint MagicValue = 0x41555241; // ASCII "AURA"
+    public const uint SignatureValue = 0x464C4F52; // ASCII "FLOR" — fin de fichier .flora
     public const byte CurrentVersion = 0x02;
     public const int Size = 16;
+    public const int SignatureSize = 4;
 
     public uint Magic { get; set; } = MagicValue;
     public byte Version { get; set; } = CurrentVersion;
