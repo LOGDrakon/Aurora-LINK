@@ -9,5 +9,9 @@
     <AppIconSource>C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK %28Package%29\Images\Aurora.jpg</AppIconSource>
     <SplashScreenSource>C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK %28Package%29\Images\Aurora.jpg</SplashScreenSource>
     <PackageLogoSource>C:\Users\MAINTENANCE\source\repos\LOGDrakon\Aurora-LINK\Aurora-LINK\Aurora-LINK %28Package%29\Images\Aurora.jpg</PackageLogoSource>
+    <UapAppxPackageBuildMode>SideloadOnly</UapAppxPackageBuildMode>
+    <AppxShowAllApps>False</AppxShowAllApps>
+    <AppxBuildConfigurationSelection>x86|x64</AppxBuildConfigurationSelection>
+    <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
   </PropertyGroup>
 </Project>

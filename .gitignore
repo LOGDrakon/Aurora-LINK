@@ -12,5 +12,13 @@ obj/
 ## NuGet
 *.nupkg
 
+## MSIX Packaging
+AppPackages/
+BundleArtifacts/
+
+## Certificates - NEVER commit private keys
+*.pfx
+*.snk
+
 ## User
 .user/
