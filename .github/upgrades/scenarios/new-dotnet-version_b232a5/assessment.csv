@@ -1,0 +1,2 @@
+ID du problème,Description,État,Gravité,Estimation en points (story point),Chemin d’accès du projet,Genre d’emplacement,Chemin,Ligne,Colonne,ID d‘incident,Lien d'aide,Nom de l'assembly,Version de l'assembly,Clé publique d’assemblée,Extrait
+Project.0002,Le ou les frameworks cibles du projet doivent être modifiés,Active,Mandatory,1,Aurora-LINK\Aurora-LINK (Package)\Aurora-LINK (Package).wapproj,File,Aurora-LINK\Aurora-LINK (Package)\Aurora-LINK (Package).wapproj,,,,,,,,Infrastructure cible actuelle: net451 Infrastructure cible recommandé: net10.0-windows10.0.26100.0

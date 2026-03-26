@@ -1,5 +1,8 @@
 {
   "profiles": {
+    "Aurora-LINK (Package)": {
+      "commandName": "MsixPackage"
+    },
     "Aurora-LINK (Unpackaged)": {
       "commandName": "Project",
       "commandLineArgs": "",
