@@ -32,6 +32,19 @@ namespace Aurora_LINK
         public MainWindow()
         {
             InitializeComponent();
+
+            try
+            {
+                var iconPath = System.IO.Path.Combine(
+                    AppContext.BaseDirectory, "Assets", "app.ico");
+                if (System.IO.File.Exists(iconPath))
+                    AppWindow.SetIcon(iconPath);
+            }
+            catch
+            {
+                // Icon is non-critical; continue without it.
+            }
+
             _projectService.DirtyChanged += OnProjectDirtyChanged;
             _projectService.ProjectChanged += OnProjectChanged;
             UpdateProjectStatus();

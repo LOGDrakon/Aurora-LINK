@@ -1,23 +1,8 @@
 ﻿using Microsoft.UI.Xaml;
-using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
-using Microsoft.UI.Xaml.Navigation;
-using Microsoft.UI.Xaml.Shapes;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.ApplicationModel;
-using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 
 namespace Aurora_LINK
 {
@@ -33,14 +18,66 @@ namespace Aurora_LINK
         public App()
         {
             InitializeComponent();
+            UnhandledException += OnUnhandledException;
+            AppDomain.CurrentDomain.UnhandledException += OnDomainUnhandledException;
+            TaskScheduler.UnobservedTaskException += OnUnobservedTaskException;
+        }
+
+        private void OnUnhandledException(object sender, Microsoft.UI.Xaml.UnhandledExceptionEventArgs e)
+        {
+            WriteCrashLog(e.Exception);
+        }
+
+        private void OnDomainUnhandledException(object sender, System.UnhandledExceptionEventArgs e)
+        {
+            WriteCrashLog(e.ExceptionObject as Exception);
+        }
+
+        private void OnUnobservedTaskException(object? sender, UnobservedTaskExceptionEventArgs e)
+        {
+            WriteCrashLog(e.Exception);
         }
 
         protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
-            var window = new MainWindow();
-            MainWindow = window;
-            _window = window;
-            _window.Activate();
+            try
+            {
+                var window = new MainWindow();
+                MainWindow = window;
+                _window = window;
+                _window.Activate();
+            }
+            catch (Exception ex)
+            {
+                WriteCrashLog(ex);
+                ShowFatalError(ex.Message);
+            }
+        }
+
+        private static void WriteCrashLog(Exception? ex)
+        {
+            try
+            {
+                var path = Path.Combine(
+                    Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                    "Aurora-LINK",
+                    "crash.log");
+                Directory.CreateDirectory(Path.GetDirectoryName(path)!);
+                File.AppendAllText(path,
+                    $"[{DateTime.Now:O}] {ex}\n---\n");
+            }
+            catch
+            {
+                // Cannot write log – ignore to avoid secondary crash.
+            }
+        }
+
+        [DllImport("user32.dll", CharSet = CharSet.Unicode)]
+        private static extern int MessageBox(nint hWnd, string text, string caption, uint type);
+
+        private static void ShowFatalError(string message)
+        {
+            MessageBox(0, message, "Aurora-LINK – Erreur fatale", 0x10 /* MB_ICONERROR */);
         }
     }
 }
