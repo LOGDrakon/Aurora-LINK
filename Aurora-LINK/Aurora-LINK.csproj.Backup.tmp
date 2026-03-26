@@ -9,7 +9,7 @@
     <FileVersion>1.0.0.0</FileVersion>
     <Company>LOGDrakon</Company>
     <Product>Aurora-LINK</Product>
-    <Description>Aurora-LINK — Logiciel de configuration Aurora</Description>
+    <Description>Aurora-LINK ï¿½ Logiciel de configuration Aurora</Description>
     <Platforms>x86;x64;ARM64</Platforms>
     <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
     <UseWinUI>true</UseWinUI>
@@ -51,11 +51,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Remove="SplashScreen.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="LINK.Client" Version="2.0.1" />
     <PackageReference Include="LINK.Core" Version="2.0.1" />
     <PackageReference Include="LINK.Transport.Serial" Version="2.0.1" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.7705" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.260209005" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="SplashScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 
   <!-- Publish Properties -->

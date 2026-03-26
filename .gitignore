@@ -22,3 +22,6 @@ BundleArtifacts/
 
 ## User
 .user/
+
+## GitHub
+.github/

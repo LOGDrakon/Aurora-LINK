@@ -88,9 +88,10 @@ public sealed class ConnectionDialog
             IsPrimaryButtonEnabled = false,
             XamlRoot = xamlRoot
         };
-    }
 
-    public async System.Threading.Tasks.Task<ContentDialogResult> ShowAsync()
+        }
+
+        public async System.Threading.Tasks.Task<ContentDialogResult> ShowAsync()
     {
         StartWatcher();
 

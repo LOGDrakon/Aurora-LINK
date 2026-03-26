@@ -7,9 +7,10 @@
   <Folder Name="/Éléments de solution/">
     <File Path=".user/docs/LINK_Architecture.md" />
   </Folder>
-  <Project Path="Aurora-LINK/Aurora-LINK/Aurora-LINK.csproj" Id="e9166505-ea99-44e8-a741-867473f914ce">
+  <Project Path="Aurora-LINK/Aurora-LINK.csproj" Id="e9166505-ea99-44e8-a741-867473f914ce">
     <Platform Solution="*|ARM64" Project="ARM64" />
     <Platform Solution="*|x64" Project="x64" />
     <Platform Solution="*|x86" Project="x86" />
+    <Deploy Solution="Release|x64" />
   </Project>
 </Solution>

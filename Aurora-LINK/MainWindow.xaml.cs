@@ -48,6 +48,7 @@ namespace Aurora_LINK
             _projectService.DirtyChanged += OnProjectDirtyChanged;
             _projectService.ProjectChanged += OnProjectChanged;
             UpdateProjectStatus();
+
             ((FrameworkElement)Content).Loaded += OnContentLoaded;
         }
 
@@ -61,10 +62,12 @@ namespace Aurora_LINK
             }
         }
 
-        private async void OnContentLoaded(object sender, RoutedEventArgs e)
+        private void OnContentLoaded(object sender, RoutedEventArgs e)
         {
             ((FrameworkElement)Content).Loaded -= OnContentLoaded;
-            await ShowConnectionDialogAsync();
+
+            // Show the dialog on the next dispatcher frame so the window is fully rendered
+            DispatcherQueue.TryEnqueue(async () => await ShowConnectionDialogAsync());
         }
 
         private async Task ShowConnectionDialogAsync()
